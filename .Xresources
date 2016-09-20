@@ -67,6 +67,6 @@
 
 
 URxvt*scrollBar:  false
-URxvt*fading:  30
-URxvt*font:  -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:10
-URxvt*boldFont:  -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:10
+!URxvt*fading:  30
+URxvt*font: xft:Terminus:pixelsize=12
+URxvt*boldFont: xft:Terminus:pixelsize=12
