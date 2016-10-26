@@ -12,3 +12,7 @@ File browser | spacefm
 Torrent client | rtorrent | start in a tmux session (keep them torrents legal plz folks)
 AUR helper | pacaur | not as annoying as yaourt
 Email client |  | currently looking
+
+###Screenshot
+![Screenshot](./screenshot.png?raw=true)
+Here's a screenshot of my current setup. Running on the screen is rtorrent within tmux, nload, dstat, and htop. Screenshot taken with scrot.
