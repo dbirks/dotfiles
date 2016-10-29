@@ -5,7 +5,7 @@ Category | Software name | Comments
 --- | :---: | ---
 Linux distros | Arch, Antergos, CentOS, Debian, Xubuntu | the Arch User Repository is amazingly helpful
 Window manager | i3 | so nice to use once you get used to it
-Shell | zsh | might switch back to bash
+Shell | bash | the fish and zsh journey ends with me at plain ol' bash
 Terminal | urxvt | Ctrl + Alt + C to copy
 Web browser | Chromium 
 File browser | spacefm
