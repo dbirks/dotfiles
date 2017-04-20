@@ -12,7 +12,7 @@
 set $mod Mod4
 set $alt Mod1
 
-font pango: Terminus, FontAwesome 10px
+font pango: xos4 Terminus, FontAwesome 10px
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -183,3 +183,9 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
 bindsym $mod+m move workspace to output left
+
+# Set wallpaper to last feh background
+exec sh ~/.fehbg
+
+# Import urxvt colors and settings
+exec xrdb -merge ~/.Xresources
