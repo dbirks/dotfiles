@@ -68,5 +68,12 @@
 
 URxvt*scrollBar:  false
 !URxvt*fading:  30
-URxvt*font: xft:xos4 Terminus:pixelsize=14
-URxvt*boldFont: xft:xos4 Terminus:pixelsize=14
+URxvt*font: xft:xos4 Terminus:pixelsize=12
+URxvt*boldFont: xft:xos4 Terminus:pixelsize=12
+!URxvt*font: xft:xos4 ttf-monoid:pixelsize=12
+!URxvt*boldFont: xft:xos4 ttf-monoid:pixelsize=12
+
+!Xcursor.theme: cursor-theme
+Xcursor.size: 16
+
+
