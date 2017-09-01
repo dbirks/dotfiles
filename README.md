@@ -7,7 +7,8 @@ Linux distros | Arch, CentOS, Debian, Antergos, Xubuntu | the Arch User Reposito
 Window manager | i3 | so nice to use once you get used to it
 Shell | bash | the fish and zsh journey ends with me at plain ol' bash
 Terminal | alacritty | 
-Web browser | Firefox Nightly 
+Web browser | Firefox Nightly | version 57+
+Password manager | Bitwarden | hosted, open source components, Android app, and browser extensions
 File browser | nautilus
 Torrent client | rtorrent | start in a tmux session (keep them torrents legal plz folks)
 AUR helper | pacaur | nicer than yaourt, install with [install-pacaur.sh](https://github.com/dbirks/scripts/blob/master/bash/install-pacaur.sh)
