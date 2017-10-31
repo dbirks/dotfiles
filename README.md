@@ -3,16 +3,16 @@
 ### Favorite software
 Category | Software name | Comments
 --- | :---: | ---
-Linux distros | Arch, CentOS, Debian, Antergos, Xubuntu | the Arch User Repository is amazingly helpful
-Window manager | i3 | so nice to use once you get used to it
+Favorite Linux distros | Arch, Grml, Debian, CentOS, Antergos | the Arch User Repository is amazingly helpful
+Window manager | bspwm | window manager that seems to flow well
 Shell | bash | the fish and zsh journey ends with me at plain ol' bash
 Terminal | alacritty | written in Rust
-Web browser | Firefox Nightly | version 57+
+Web browser | Firefox Beta | version 57+
 Password manager | Bitwarden | hosted, open source components, Android app, and browser extensions
 File browser | nautilus, ranger
-Torrent client | rtorrent | start in a tmux session (keep them torrents legal plz folks)
+Torrent client | rtorrent, Flood | start in a tmux session (keep them torrents legal plz folks), with Flood as a front-end
 AUR helper | pacaur | nicer than yaourt, install with [install-pacaur.sh](https://github.com/dbirks/scripts/blob/master/bash/install-pacaur.sh)
-Email client | Thunderbird and Evolution | 
+Email client | Thunderbird | just werks
 
 ### Screenshot
 ![Screenshot](./screenshot.png?raw=true)
