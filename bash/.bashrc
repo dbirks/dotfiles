@@ -31,7 +31,3 @@ fi
 if [[ "$SSH_AGENT_PID" == "" ]]; then
     eval "$(<~/.ssh-agent-thing)" >/dev/null
 fi
-
-# set background to latest one set by feh
-~/.fehbg &
-
