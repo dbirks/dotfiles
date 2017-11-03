@@ -141,3 +141,7 @@ super + {minus,equal}
 #	bspc pointer -t %i %i
 #super + @button{1-3}
 #bspc pointer -u
+
+# lock screen
+ctrl + l
+        i3lock-fancy

@@ -13,6 +13,7 @@ File browser | nautilus, ranger
 Torrent client | rtorrent, Flood | start in a tmux session (keep them torrents legal plz folks), with Flood as a front-end
 AUR helper | pacaur | nicer than yaourt, install with [install-pacaur.sh](https://github.com/dbirks/scripts/blob/master/bash/install-pacaur.sh)
 Email client | Thunderbird | just werks
+Lock screen | i3lock-fancy | specifically the dualmonitor branch, in the AUR as i3lock-fancy-dualmonitors-git
 
 ### Screenshot
 ![Screenshot](./screenshot.png?raw=true)
