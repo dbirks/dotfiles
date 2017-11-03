@@ -143,5 +143,5 @@ super + {minus,equal}
 #bspc pointer -u
 
 # lock screen
-ctrl + l
+alt + l
         i3lock-fancy
