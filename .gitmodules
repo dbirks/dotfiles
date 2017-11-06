@@ -1,0 +1,3 @@
+[submodule "vim/.vim/pack/dbirks/start/vim-airline"]
+	path = vim/.vim/pack/dbirks/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
