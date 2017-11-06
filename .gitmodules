@@ -4,3 +4,6 @@
 [submodule "vim/.vim/pack/dbirks/start/vim-sensible"]
 	path = vim/.vim/pack/dbirks/start/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
+[submodule "vim/.vim/pack/dbirks/start/vim-gitgutter"]
+	path = vim/.vim/pack/dbirks/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
