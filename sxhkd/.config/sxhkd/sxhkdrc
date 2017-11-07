@@ -144,4 +144,4 @@ super + {minus,equal}
 
 # lock screen
 alt + l
-       dm-tool lock 
+       light-locker-command -l 

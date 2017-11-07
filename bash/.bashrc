@@ -26,8 +26,8 @@ export LC_ALL=en_US.UTF-8
 
 # start ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent > ~/.ssh-agent-thing
+    ssh-agent > /tmp/ssh-agent-thing
 fi
 if [[ "$SSH_AGENT_PID" == "" ]]; then
-    eval "$(<~/.ssh-agent-thing)" >/dev/null
+    eval "$(</tmp/ssh-agent-thing)" >/dev/null
 fi

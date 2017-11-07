@@ -1,4 +1,8 @@
-xsetroot -cursor_name left_ptr
+nohup light-locker &
 
-sxhkd &
+nohup ssh-agent &
+
+# set wallpaper
+#nohup ~/.fehbg &
+
 exec bspwm
