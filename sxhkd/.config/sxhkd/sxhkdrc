@@ -144,4 +144,4 @@ super + {minus,equal}
 
 # lock screen
 alt + l
-        i3lock-fancy
+       dm-tool lock 
