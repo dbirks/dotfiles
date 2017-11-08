@@ -1,2 +1,2 @@
 #!/bin/sh
-exec 'feh' '--recursive' '--randomize' '--bg-scale' '/home/david/wallpapers' 
+'feh' '--recursive' '--randomize' '--bg-scale' '/home/david/wallpapers' 
