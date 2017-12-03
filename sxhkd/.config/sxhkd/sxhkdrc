@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-        i3-dmenu-desktop	
+        rofi -show run
 
 # make sxhkd reload its configuration files:
 super + Escape
