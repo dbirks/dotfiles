@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--recursive' '--randomize' '--bg-scale' '/home/david/wallpapers' 
+'feh' '--bg-fill' 'Downloads/38589327756_b54a8903f7_o.jpg' 
