@@ -1,5 +1,7 @@
 # dotfiles
 
+I use GNU stow to manage the symlinks to my configs. From the base directory, you just run something like `stow vim alacritty bspwm sxhkd polybar` to link everything to the appropriate place in `$HOME`. If you want to import some of your own configs, look into the `--adopt` flag.
+
 ### Favorite software
 Category | Software name | Comments
 --- | :---: | ---
@@ -8,6 +10,7 @@ Window manager | bspwm | window manager that seems to flow well
 Display manager | LightDM | I use `lightdm-devel` from the AUR
 Shell | bash | the fish and zsh journey ends with me at plain ol' bash
 Terminal | alacritty | written in Rust
+Bar | polybar | 
 Web browser | Firefox Beta | version 57+
 Password manager | Bitwarden | hosted, open source components, Android app, and browser extensions
 File browser | nautilus, ranger
