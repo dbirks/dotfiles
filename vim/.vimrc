@@ -6,3 +6,6 @@ set expandtab
 set softtabstop=4
 set shiftwidth=4
 filetype indent on
+
+" NERDtree
+map <C-n> :NERDTreeToggle<CR>

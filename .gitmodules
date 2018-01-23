@@ -7,3 +7,6 @@
 [submodule "vim/.vim/pack/dbirks/start/vim-gitgutter"]
 	path = vim/.vim/pack/dbirks/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
+[submodule "vim/.vim/pack/dbirks/start/nerdtree"]
+	path = vim/.vim/pack/dbirks/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
