@@ -10,3 +10,6 @@
 [submodule "vim/.vim/pack/dbirks/start/nerdtree"]
 	path = vim/.vim/pack/dbirks/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/.vim/pack/dbirks/start/phpcomplete.vim"]
+	path = vim/.vim/pack/dbirks/start/phpcomplete.vim
+	url = https://github.com/shawncplus/phpcomplete.vim.git

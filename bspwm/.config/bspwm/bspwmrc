@@ -12,6 +12,12 @@ light-locker &
 # bar
 ~/.config/polybar/launch.sh
 
+# KDE connect
+indicator-kdeconnect &
+
+# NetworkManager tray 
+nm-applet &
+
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         2
