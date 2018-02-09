@@ -10,13 +10,14 @@ Window manager | bspwm | window manager that seems to flow well
 Display manager | LightDM | I use `lightdm-devel` from the AUR
 Shell | bash | the fish and zsh journey ends with me at plain ol' bash
 Terminal | alacritty | written in Rust
+Text editor | gvim or vim | 
 Bar | polybar | 
 Web browser | Firefox Beta | version 57+
 Password manager | Bitwarden | hosted, open source components, Android app, and browser extensions
 File browser | nautilus, ranger
 Torrent client | rtorrent, Flood | start in a tmux session (keep them torrents legal plz folks), with Flood as a front-end
 AUR helper | pacaur | nicer than yaourt, install with [install-pacaur.sh](https://github.com/dbirks/scripts/blob/master/bash/install-pacaur.sh)
-Email client | Thunderbird | just werks
+Email client | Mailspring | nice modern-looking replacement for thunderbird for now
 Lock screen | light-locker | to use with lightdm
 Backups | duplicity | with deja-dup as the frontend
 
