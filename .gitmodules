@@ -13,3 +13,6 @@
 [submodule "vim/.vim/pack/dbirks/start/phpcomplete.vim"]
 	path = vim/.vim/pack/dbirks/start/phpcomplete.vim
 	url = https://github.com/shawncplus/phpcomplete.vim.git
+[submodule "vim/.vim/pack/dbirks/start/vim-vinegar"]
+	path = vim/.vim/pack/dbirks/start/vim-vinegar
+	url = git://github.com/tpope/vim-vinegar.git

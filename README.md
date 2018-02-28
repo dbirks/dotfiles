@@ -15,6 +15,7 @@ Bar | polybar |
 Web browser | Firefox Beta | version 57+
 Password manager | Bitwarden | hosted, open source components, Android app, and browser extensions
 File browser | nautilus, ranger
+Diff viewer | Meld
 Torrent client | rtorrent, Flood | start in a tmux session (keep them torrents legal plz folks), with Flood as a front-end
 AUR helper | pacaur | nicer than yaourt, install with [install-pacaur.sh](https://github.com/dbirks/scripts/blob/master/bash/install-pacaur.sh)
 Email client | Mailspring | nice modern-looking replacement for thunderbird for now

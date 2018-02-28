@@ -1,72 +1,69 @@
-! --- ~/.Xresources ------------------------------------------------------------
-! ------------------------------------------------------------------------------
-! --- generated with 4bit Terminal Color Scheme Designer -----------------------
-! ------------------------------------------------------------------------------
-! --- http://ciembor.github.com/4bit -------------------------------------------
-! ------------------------------------------------------------------------------
+! Base16 Hopscotch
+! Scheme: Jan T. Sott
 
-! --- special colors ---
+#define base00 #322931
+#define base01 #433b42
+#define base02 #5c545b
+#define base03 #797379
+#define base04 #989498
+#define base05 #b9b5b8
+#define base06 #d5d3d5
+#define base07 #ffffff
+#define base08 #dd464c
+#define base09 #fd8b19
+#define base0A #fdcc59
+#define base0B #8fc13e
+#define base0C #149b93
+#define base0D #1290bf
+#define base0E #c85e7c
+#define base0F #b33508
 
-*background: #140616
-*foreground: #d9e6f2
+*foreground:   base05
+#ifdef background_opacity
+*background:   [background_opacity]base00
+#else
+*background:   base00
+#endif
+*cursorColor:  base05
 
-! --- standard colors ---
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
 
-! black
-*color0: #121212
+*color8:       base03
+*color9:       base08
+*color10:      base0B
+*color11:      base0A
+*color12:      base0D
+*color13:      base0E
+*color14:      base0C
+*color15:      base07
 
-! bright_black
-*color8: #303030
-
-! red
-*color1: #e8a581
-
-! bright_red
-*color9: #f3cfbc
-
-! green
-*color2: #81e8a5
-
-! bright_green
-*color10: #bcf3cf
-
-! yellow
-*color3: #c4e881
-
-! bright_yellow
-*color11: #dff3bc
-
-! blue
-*color4: #a581e8
-
-! bright_blue
-*color12: #cfbcf3
-
-! magenta
-*color5: #e881c4
-
-! bright_magenta
-*color13: #f3bcdf
-
-! cyan
-*color6: #81c4e8
-
-! bright_cyan
-*color14: #bcdff3
-
-! white
-*color7: #d0d0d0
-
-! bright_white
-*color15: #e4e4e4
-
-
-! ------------------------------------------------------------------------------
-! --- end of terminal colors section -------------------------------------------
-! ------------------------------------------------------------------------------
-
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*color16:      base09
+*color17:      base0F
+*color18:      base01
+*color19:      base02
+*color20:      base04
+*color21:      base06
 
 URxvt*scrollBar:  false
 !URxvt*fading:  30
-URxvt*font: xft:xos4 Terminus:pixelsize=14
-URxvt*boldFont: xft:xos4 Terminus:pixelsize=14
+!URxvt*font: xft:xos4 Terminus:pixelsize=14
+!URxvt*boldFont: xft:xos4 Terminus:pixelsize=14
+!URxvt*font: xft:Fantasque Sans Mono:size=12:antialias=true:hinting=true
+!URxvt*boldFont: xft:Source Code Pro:size=12:antialias=true:hinting=true
+!URxvt*italicFont: xft:Source Code Pro:style=Oblique:size=12:antialias=true:hinting=true
+!URxvt*boldItalicFont: xft:Source Code Pro:style=Bold Oblique:size=12:antialias=true:hinting=true
+!URxvt*letterSpace: -2
+
+URxvt.font:     xft:Fantasque Sans Mono-13,xft:FontAwesome-13
+URxvt.boldFont: xft:Fantasque Sans Mono-13,xft:FontAwesome-13
+URxvt.letterSpace: 0
+
