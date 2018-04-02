@@ -66,4 +66,3 @@ URxvt*scrollBar:  false
 URxvt.font:     xft:Fantasque Sans Mono-13,xft:FontAwesome-13
 URxvt.boldFont: xft:Fantasque Sans Mono-13,xft:FontAwesome-13
 URxvt.letterSpace: 0
-
