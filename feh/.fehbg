@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--bg-scale' '/home/david/Downloads/sylvain-sarrailh-forestofliars1080p.jpg' 
+feh --bg-scale '/home/david/Downloads/sylvain-sarrailh-forestofliars1080p.jpg' 

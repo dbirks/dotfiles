@@ -31,3 +31,7 @@ fi
 if [[ "$SSH_AGENT_PID" == "" ]]; then
     eval "$(</tmp/ssh-agent-thing)" >/dev/null
 fi
+
+# Custom bash prompt via kirsle.net/wizards/ps1.html
+# Rainbow scheme
+export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
