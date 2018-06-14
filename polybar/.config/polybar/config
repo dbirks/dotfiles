@@ -19,6 +19,8 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/example]
+; Multiple monitors
+monitor = ${env:MONITOR:}
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 27
