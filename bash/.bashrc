@@ -10,6 +10,7 @@ PS1='[\u@\h \W]\$ '
 BROWSER=/usr/bin/firefox-beta
 EDITOR=/usr/bin/vim
 VISUAL=$EDITOR
+TERM=xterm-256color
 
 # Xrandr
 #xrandr --output DP1 --mode 1920x1080

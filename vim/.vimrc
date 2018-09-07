@@ -19,9 +19,6 @@ set guioptions-=R
 "---------Search---------"
 set hlsearch
 set incsearch
-
-
-"---------Search---------"
 set splitbelow						"some splitting defaults
 set splitright
 
@@ -44,6 +41,8 @@ nmap <Leader><space> :nohlsearch<cr>
 "Ctrl + backspace to delete prev word
 imap <C-BS> <C-W>
 
+"Open NERDTree with Ctrl+n
+map <C-n> :NERDTreeToggle<CR>
 
 "---------Auto-commands--------"
 
@@ -53,3 +52,7 @@ augroup autosourcing
 	autocmd!
 	autocmd BufWritePost .vimrc source %
 augroup END
+
+"Open NERDTree if no files specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
