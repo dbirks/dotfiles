@@ -1,0 +1,16 @@
+! Enabled modi
+rofi.modi:                           drun,ssh
+! Window width
+rofi.width:                          30
+! Number of lines
+rofi.lines:                          5
+! Number of columns
+rofi.columns:                        1
+! Font to use
+rofi.font:                           Fantasque Sans Mono 15
+! Theme
+rofi.theme:                          hopscotch
+! Parse known_hosts file for ssh mode
+rofi.parse-known-hosts:              true
+! Enable sidebar-mode
+rofi.sidebar-mode:                   false

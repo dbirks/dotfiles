@@ -149,3 +149,7 @@ alt + l
 # Balance layout so that all windows have the same area
 super + b
         bspc desktop -B
+
+# suspend system
+alt + 1
+	systemctl suspend

@@ -38,7 +38,7 @@ fi
 export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
 # Modify PATH
-export PATH=${PATH}:/home/${USER}/bin:/home/${USER}/bin/go
+export PATH=${PATH}:/home/${USER}/bin:/home/${USER}/bin/go:$HOME/.config/composer/vendor/bin:/home/david/.gem/ruby/2.5.0/bin
 
 # Golang
 export GOPATH=/home/${USER}/bin/go

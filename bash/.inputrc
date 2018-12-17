@@ -1,0 +1,3 @@
+# bash history searching by typing some and pressing up
+"\e[A": history-search-backward
+"\e[B": history-search-forward
