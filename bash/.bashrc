@@ -7,7 +7,7 @@
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
-BROWSER=/usr/bin/firefox-beta
+BROWSER=/usr/bin/firefox
 EDITOR=/usr/bin/vim
 VISUAL=$EDITOR
 TERM=xterm-256color
