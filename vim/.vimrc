@@ -15,9 +15,14 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 
+"Make tabs and trailing spaces stand out
+"Sets characters > and < when the line goes off screen
+:set listchars=tab:»»,trail:█,extends:>,precedes:<
+:set list
+
 
 "---------Search---------"
-set hlsearch
+set hlsearch                                            "search highlighting
 set incsearch
 set splitbelow						"some splitting defaults
 set splitright
@@ -60,3 +65,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "---------Formatting----------"
 "yaml
 autocmd FileType yaml setlocal ai ts=2 sw=2 et
+
+" Don't write new EOL when it's not there
+set noendofline
+set nofixendofline
+
+set backspace=indent,eol,start  " more powerful backspacing

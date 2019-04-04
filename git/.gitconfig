@@ -4,3 +4,6 @@
 	name = David Birks
 	email = davidebirks@gmail.com   
 	signingKey = B26F9AD8DA203392EF87C61ABB999F83D9A19A36
+
+[color]
+	ui = true

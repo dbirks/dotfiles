@@ -62,10 +62,11 @@ URxvt*scrollBar:  false
 !URxvt*italicFont: xft:Source Code Pro:style=Oblique:size=12:antialias=true:hinting=true
 !URxvt*boldItalicFont: xft:Source Code Pro:style=Bold Oblique:size=12:antialias=true:hinting=true
 !URxvt*letterSpace: -2
+Urxvt*savelines: 65535
 
-URxvt.font:     xft:Fantasque Sans Mono-12,xft:Iosevka-12
-URxvt.boldFont: xft:Fantasque Sans Mono-Bold-12,xft:Iosevka-12
-URxvt.italicFont: xft:Fantasque Sans Mono-Italic-12,xft:Iosevka-12
+URxvt.font:     xft:Fantasque Sans Mono-12,xft:Iosevka-12:antialias=false
+URxvt.boldFont: xft:Fantasque Sans Mono-Bold-12,xft:Iosevka-12:antialias=false
+URxvt.italicFont: xft:Fantasque Sans Mono-Italic-12,xft:Iosevka-12:antialias=false
 !URxvt.font:     xft:Fantasque Sans Mono-11,xft:Font Awesome-11
 !URxvt.boldFont: xft:Fantasque Sans Mono-11,xft:Font Awesome-11
 !URxvt.font:     xft:Fantasque Sans Mono:size=11,xft:FontAwesome:size=11

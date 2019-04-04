@@ -21,7 +21,12 @@ nm-applet &
 # set typematic delay
 xset r rate 200 60
 
-bspc monitor eDP1 -d I II III IV V VI VII VIII IX X XI XII
+bspc monitor eDP-1 -d I II III IV V VI VII VIII IX X XI XII
+bspc monitor DP-1 -d I II III IV V VI VII VIII IX X XI XII
+bspc monitor DP-2 -d I II III IV V VI VII VIII IX X XI XII
+bspc monitor DP-3 -d I II III IV V VI VII VIII IX X XI XII
+bspc monitor DP-1-1 -d I II III IV V VI VII VIII IX X XI XII
+bspc monitor DP-1-2 -d I II III IV V VI VII VIII IX X XI XII
 
 bspc config border_width         2
 bspc config window_gap          24

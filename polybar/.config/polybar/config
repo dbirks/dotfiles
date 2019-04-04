@@ -20,8 +20,8 @@ alert = #bd2c40
 
 [bar/example]
 ; Multiple monitors
-monitor = ${env:MONITOR:}
-;monitor = ${env:MONITOR:HDMI-1}
+;monitor = ${env:MONITOR:}
+monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 27
 ;offset-x = 1%
@@ -44,9 +44,13 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
+;font-0 = fixed:pixelsize=10;1
+font-0 = DejaVuSans:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+;font-1 = FontAwesome:pixelsize=10;1
+;font-2 = siji:pixelsize=10;1
+font-2 = "Wuncon Siji":pixelsize=10;1
+;font-2 = "fontawesome":pixelsize=10;1
 
 modules-left = bspwm
 modules-center = 
@@ -62,8 +66,8 @@ tray-padding = 2
 
 ;override-redirect = true
 
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
@@ -260,7 +264,7 @@ format-underline = #0a6cf5
 label = %date% %time%
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL
