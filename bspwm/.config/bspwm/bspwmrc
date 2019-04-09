@@ -3,7 +3,7 @@
 # keymaps
 sxhkd &
 
-# display manager
+# display manager locker
 light-locker &
 
 # wallpaper
@@ -15,18 +15,18 @@ light-locker &
 # KDE connect
 indicator-kdeconnect &
 
-# NetworkManager tray 
+# NetworkManager tray
 nm-applet &
 
 # set typematic delay
 xset r rate 200 60
 
-bspc monitor eDP-1 -d I II III IV V VI VII VIII IX X XI XII
-bspc monitor DP-1 -d I II III IV V VI VII VIII IX X XI XII
-bspc monitor DP-2 -d I II III IV V VI VII VIII IX X XI XII
-bspc monitor DP-3 -d I II III IV V VI VII VIII IX X XI XII
-bspc monitor DP-1-1 -d I II III IV V VI VII VIII IX X XI XII
-bspc monitor DP-1-2 -d I II III IV V VI VII VIII IX X XI XII
+bspc monitor eDP-1 -d I II III
+bspc monitor DP-1 -d I II III
+bspc monitor DP-2 -d I II III
+bspc monitor DP-3 -d I II III
+bspc monitor DP-1-1 -d I II III
+bspc monitor DP-1-2 -d I II III
 
 bspc config border_width         2
 bspc config window_gap          24
