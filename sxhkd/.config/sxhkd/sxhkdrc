@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-        rofi -show drun
+	rofi -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -124,11 +124,11 @@ super + {Left,Down,Up,Right}
 super + {a,f}
 	$HOME/scripts/window_move.sh {-p,-n} -x -s 20
 super + {s,d}
-        $HOME/scripts/window_move.sh {-p,-n} -y -s 20
+	$HOME/scripts/window_move.sh {-p,-n} -y -s 20
 
 # Rotate the desktop window tree
 {ctrl,alt} + F3
-        bspc desktop --rotate {270,90}
+	bspc desktop --rotate {270,90}
 
 # Window gap
 super + {minus,equal}
@@ -136,7 +136,7 @@ super + {minus,equal}
 
 # Balance layout so that all windows have the same area
 super + b
-        bspc desktop -B
+	bspc desktop -B
 
 #
 # mine
@@ -152,7 +152,6 @@ super + b
 
 # lock screen
 alt + l
-        #light-locker-command -l 
 	dm-tool lock
 
 # suspend system
