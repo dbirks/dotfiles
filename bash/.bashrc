@@ -38,7 +38,7 @@ fi
 export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
 # Modify PATH
-export PATH=${PATH}:/home/${USER}/bin:/home/${USER}/bin/go:$HOME/.config/composer/vendor/bin:/home/david/.gem/ruby/2.5.0/bin
+export PATH=${PATH}:/home/${USER}/bin:$HOME/go/bin:$HOME/.config/composer/vendor/bin:/home/david/.gem/ruby/2.5.0/bin
 
 # Golang
 #export GOPATH=/home/${USER}/bin/go
@@ -58,12 +58,9 @@ export HISTFILESIZE=-1
 # default editor for kubectl
 export KUBE_EDITOR=/usr/bin/vim
 
-# git docker container
-function git4 () {
-    (docker run -ti --rm -e GIT_DISCOVERY_ACROSS_FILESYSTEM=1 -v ${HOME}:/root -v $(pwd):/git alpine/git "$@")
-}
+# Krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-got(){
-    docker run -it --rm -v ${HOME}:/home/git-user -v ${PWD}:/git-workdir -e UID=$UID -e GID=$GROUPS -e GIT_DISCOVERY_ACROSS_FILESYSTEM db378/git "$@"
-}
-
+# Wasmer
+export WASMER_DIR="$HOME/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"  # This loads wasmer

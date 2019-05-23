@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	urxvt -lsp 3
+	alacritty
 
 # program launcher
 super + @space

@@ -17,8 +17,9 @@ set guioptions-=R
 
 "Make tabs and trailing spaces stand out
 "Sets characters > and < when the line goes off screen
-:set listchars=tab:»»,trail:█,extends:>,precedes:<
+:set listchars=tab:»•,trail:█,extends:>,precedes:<
 :set list
+:set relativenumber
 
 
 "---------Search---------"
