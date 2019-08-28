@@ -19,3 +19,6 @@
 [submodule "vim/.vim/pack/dbirks/start/YouCompleteMe"]
 	path = vim/.vim/pack/dbirks/start/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/.vim/pack/dbirks/start/vim-terraform"]
+	path = vim/.vim/pack/dbirks/start/vim-terraform
+	url = git@github.com:hashivim/vim-terraform.git
