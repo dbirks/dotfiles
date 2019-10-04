@@ -4,7 +4,7 @@
 sxhkd &
 
 # display manager locker
-light-locker &
+#light-locker &
 
 # wallpaper
 ~/.fehbg
@@ -21,12 +21,13 @@ nm-applet &
 # set typematic delay
 xset r rate 200 60
 
-bspc monitor eDP-1 -d I II III
+bspc monitor eDP-1 -d I II III IV
 bspc monitor DP-1 -d I II III
 bspc monitor DP-2 -d I II III
 bspc monitor DP-3 -d I II III
 bspc monitor DP-1-1 -d I II III
 bspc monitor DP-1-2 -d I II III
+bspc monitor DP-1-3 -d I II III
 
 bspc config border_width         2
 bspc config window_gap          24

@@ -19,7 +19,7 @@ set guioptions-=R
 "Sets characters > and < when the line goes off screen
 :set listchars=tab:»•,trail:█,extends:>,precedes:<
 :set list
-:set relativenumber
+":set relativenumber
 
 
 "---------Search---------"
@@ -71,4 +71,11 @@ autocmd FileType yaml setlocal ai ts=2 sw=2 et
 set noendofline
 set nofixendofline
 
-set backspace=indent,eol,start  " more powerful backspacing
+"---------Indenting----------"
+
+:set autoindent
+:set smartindent
+
+"---------Pasting----------"
+
+:set pastetoggle=<f5>
