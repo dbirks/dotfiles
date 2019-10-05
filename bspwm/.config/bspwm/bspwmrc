@@ -7,13 +7,13 @@ sxhkd &
 #light-locker &
 
 # wallpaper
-~/.fehbg
+#~/.fehbg
 
 # bar
 ~/.config/polybar/launch.sh
 
 # KDE connect
-indicator-kdeconnect &
+#indicator-kdeconnect &
 
 # NetworkManager tray
 nm-applet &
@@ -29,7 +29,7 @@ bspc monitor DP-1-1 -d I II III
 bspc monitor DP-1-2 -d I II III
 bspc monitor DP-1-3 -d I II III
 
-bspc config border_width         2
+bspc config border_width         1
 bspc config window_gap          24
 
 bspc config split_ratio          0.50

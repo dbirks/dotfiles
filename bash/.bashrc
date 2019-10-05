@@ -7,19 +7,21 @@
 
 alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '
-export BROWSER=firefox.desktop
-export EDITOR=/usr/bin/vim
+export BROWSER=firefox
+export EDITOR=vim
 export VISUAL="$EDITOR"
 export TERM=xterm-256color
+#export TERM=screen-256color-bce
 export PAGER=less
+#[ -n "$TMUX" ] && export TERM=screen-256color
 
-# Xrandr
+## Xrandr
 #xrandr --output DP1 --mode 1920x1080
 #xrdb -merge ~/.Xresources
 
-# NVM
-export NVM_DIR="/home/david/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+## NVM
+#export NVM_DIR="/home/david/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # locale exports
 export LANG=en_US.UTF-8
@@ -45,9 +47,9 @@ export PATH=${PATH}:/home/${USER}/bin:$HOME/go/bin:$HOME/.config/composer/vendor
 # Golang
 #export GOPATH=/home/${USER}/bin/go
 
-# alias for https://transfer.sh
-transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
-tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
+## alias for https://transfer.sh
+#transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
+#tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
 
 # save bash history, and also append it after every command
 shopt -s histappend
@@ -58,8 +60,9 @@ export HISTSIZE=-1
 export HISTFILESIZE=-1
 export HISTIGNORE='pwd:jobs:ll:ls:l:fg:history:clear:exit'
 
-# default editor for kubectl
+# Kubernetes
 export KUBE_EDITOR=/usr/bin/vim
+alias k=kubectl
 
 # Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
@@ -68,6 +71,7 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"  # This loads wasmer
 
+# Terraform
 complete -C /usr/bin/terraform terraform
 
 # Intellij fix
@@ -76,8 +80,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Diff colors
 alias diff='diff | diff-so-fancy'
-
-alias k=kubectl
 
 # SSH key fun
 alias ssh-pigeon='ssh-add -D && ssh-add ~/.ssh/pigeon'
