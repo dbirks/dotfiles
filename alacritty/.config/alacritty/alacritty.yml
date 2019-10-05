@@ -20,6 +20,9 @@ font:
     family: Fantasque Sans Mono
   italic:
     family: Fantasque Sans Mono
+  bold_italic:
+    family: Fantasque Sans Mono
+
   size: 12.0
   offset:
     x: 0
@@ -93,8 +96,6 @@ schemes:
     indexed_colors: []
 colors: *hopscotch
 background_opacity: 1.0
-mouse_bindings:
-  - { mouse: Middle, action: PasteSelection }
 mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
@@ -110,6 +111,8 @@ cursor:
 live_config_reload: true
 enable_experimental_conpty_backend: false
 alt_send_esc: true
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
 key_bindings:
   - { key: V,        mods: Control|Shift, action: Paste            }
   - { key: C,        mods: Control|Shift, action: Copy             }
