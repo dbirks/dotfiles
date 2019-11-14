@@ -60,12 +60,12 @@ augroup autosourcing
 augroup END
 
 "Open NERDTree if no files specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "---------Formatting----------"
 "yaml
-autocmd FileType yaml setlocal ai ts=2 sw=2 et
+"autocmd FileType yaml setlocal ai ts=2 sw=2 et
 
 " Don't write new EOL when it's not there
 set noendofline

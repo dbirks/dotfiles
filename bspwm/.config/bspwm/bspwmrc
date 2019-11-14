@@ -18,6 +18,10 @@ sxhkd &
 # NetworkManager tray
 nm-applet &
 
+# Notifications
+pkill dunst
+dunst
+
 # set typematic delay
 xset r rate 200 60
 
@@ -30,7 +34,8 @@ bspc monitor DP-1-2 -d I II III
 bspc monitor DP-1-3 -d I II III
 
 bspc config border_width         1
-bspc config window_gap          24
+#bspc config window_gap          24
+bspc config window_gap          0
 
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
