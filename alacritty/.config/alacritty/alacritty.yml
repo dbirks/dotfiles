@@ -6,13 +6,10 @@ window:
     x: 2
     y: 2
   dynamic_padding: false
-  decorations: none
+  #decorations: none
 scrolling:
   history: 100000
   multiplier: 3
-  faux_multiplier: 3
-  auto_scroll: false
-tabspaces: 8
 font:
   normal:
     family: Fantasque Sans Mono

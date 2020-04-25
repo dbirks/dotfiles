@@ -17,8 +17,8 @@ set guioptions-=R
 
 "Make tabs and trailing spaces stand out
 "Sets characters > and < when the line goes off screen
-:set listchars=tab:»•,trail:█,extends:>,precedes:<
-:set list
+set listchars=tab:»•,trail:█,extends:>,precedes:<
+set list
 ":set relativenumber
 
 
@@ -66,6 +66,8 @@ augroup END
 "---------Formatting----------"
 "yaml
 "autocmd FileType yaml setlocal ai ts=2 sw=2 et
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+set expandtab
 
 " Don't write new EOL when it's not there
 set noendofline
@@ -73,9 +75,9 @@ set nofixendofline
 
 "---------Indenting----------"
 
-:set autoindent
-:set smartindent
+set autoindent
+set smartindent
 
 "---------Pasting----------"
 
-:set pastetoggle=<f5>
+set pastetoggle=<f5>

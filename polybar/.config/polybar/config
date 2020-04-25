@@ -62,7 +62,7 @@ font-1 = Siji:pixelsize=9;1
 
 modules-left = bspwm
 modules-center =
-modules-right = xbacklight volume eth wlan github filesystem memory cpu temperature battery date powermenu
+modules-right = backlight volume eth wlan github filesystem memory cpu temperature battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -139,22 +139,38 @@ label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
-;[module/xbacklight]
+[module/backlight]
+type = internal/xbacklight
+card = intel_backlight
+format = <label> <bar> <ramp>
+
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = #ff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
+
+enable-scroll = true
+
+;[module/backlight]
 ;type = internal/xbacklight
-;
+
 ;format = <label> <bar>
 ;label = BL
-;
-;bar-width = 10
-;bar-indicator = |
-;bar-indicator-foreground = #ff
-;bar-indicator-font = 2
-;bar-fill = ─
-;bar-fill-font = 2
-;bar-fill-foreground = #9f78e1
-;bar-empty = ─
-;bar-empty-font = 2
-;bar-empty-foreground = ${colors.foreground-alt}
+
+;output = eDP-1
+
 
 ;[module/backlight-acpi]
 ;inherit = module/xbacklight
