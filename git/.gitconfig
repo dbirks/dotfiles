@@ -2,7 +2,7 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = David Birks
-	email = david@tellus.space
+	email = david@birks.dev
 	signingKey = B26F9AD8DA203392EF87C61ABB999F83D9A19A36
 
 [color]
@@ -26,3 +26,12 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[diff "sopsdiffer"]
+	textconv = sops -d
+[commit]
+	gpgSign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
