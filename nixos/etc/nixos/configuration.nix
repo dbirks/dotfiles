@@ -5,22 +5,18 @@
 { config, pkgs, options, ... }:
 
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      #<nixos-hardware/dell/xps/15-9560/intel>
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    #<nixos-hardware/dell/xps/15-9560/intel>
+    ./hardware-configuration.nix
+  ];
 
   nixpkgs.config = {
     allowUnfree = true;
 
     packageOverrides = pkgs: rec {
-      dbeaver = pkgs.dbeaver.overrideAttrs (attrs: {
-        patches = [
-          ./patches/dbeaver.patch
-        ];
-      });
+      dbeaver = pkgs.dbeaver.overrideAttrs
+        (attrs: { patches = [ ./patches/dbeaver.patch ]; });
     };
   };
 
@@ -149,9 +145,7 @@
     terragrunt
   ];
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "python2.7-cryptography-2.9.2"
-  ];
+  nixpkgs.config.permittedInsecurePackages = [ "python2.7-cryptography-2.9.2" ];
 
   fonts.fonts = with pkgs; [
     fantasque-sans-mono
@@ -188,10 +182,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  services.printing.drivers = with pkgs; [
-    gutenprint
-    hplip
-  ];
+  services.printing.drivers = with pkgs; [ gutenprint hplip ];
 
   # Enable sound.
   sound.enable = true;
