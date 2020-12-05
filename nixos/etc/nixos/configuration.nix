@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       #<nixos-hardware/dell/xps/15-9560/intel>
       ./hardware-configuration.nix
     ];
@@ -83,6 +84,7 @@
     ldns
     spotify
     nixfmt
+    nixpkgs-fmt
     openconnect
     gnupg
     stow
@@ -173,7 +175,7 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-  
+
   virtualisation.docker.enable = true;
 
   virtualisation.libvirtd.enable = true;
@@ -242,4 +244,3 @@
   system.stateVersion = "20.09"; # Did you read the comment?
 
 }
-
