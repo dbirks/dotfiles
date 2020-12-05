@@ -13,7 +13,7 @@ export VISUAL="$EDITOR"
 export TERM=xterm-256color
 #export TERM=screen-256color-bce
 export PAGER=less
-#[ -n "$TMUX" ] && export TERM=screen-256color
+[ -n "$TMUX" ] && export TERM=screen-256color
 
 ## Xrandr
 #xrandr --output DP1 --mode 1920x1080
@@ -28,13 +28,13 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# start ssh-agent
-if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent > /tmp/ssh-agent-thing
-fi
-if [[ "$SSH_AGENT_PID" == "" ]]; then
-    eval "$(</tmp/ssh-agent-thing)" >/dev/null
-fi
+# # start ssh-agent
+# if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+#     ssh-agent > /tmp/ssh-agent-thing
+# fi
+# if [[ "$SSH_AGENT_PID" == "" ]]; then
+#     eval "$(</tmp/ssh-agent-thing)" >/dev/null
+# fi
 
 # Custom bash prompt via kirsle.net/wizards/ps1.html
 # Rainbow scheme
@@ -61,18 +61,17 @@ export HISTFILESIZE=-1
 export HISTIGNORE='pwd:jobs:ll:ls:l:fg:history:clear:exit'
 
 # Kubernetes
-export KUBE_EDITOR=/usr/bin/vim
-alias k=kubectl
+export KUBE_EDITOR=$EDITOR
 
 # Krew
 #export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Wasmer
-export WASMER_DIR="$HOME/.wasmer"
-[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"  # This loads wasmer
+#export WASMER_DIR="$HOME/.wasmer"
+#[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"  # This loads wasmer
 
 # Terraform
-complete -C /usr/bin/terraform terraform
+#complete -C /usr/bin/terraform terraform
 
 # Intellij fix
 # https://stackoverflow.com/a/34419927/7733616
@@ -132,3 +131,14 @@ export DO_NOT_TRACK=1
 
 # Show postgres error colors
 export PG_COLOR=always
+
+# https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity#Tools_for_generating_SRI_hashes
+generate-sha256-sri-hash-from-url() {
+  curl -L $1 | shasum -b -a 256 | awk '{ print $1 }' | xxd -r -p | base64 | awk '{ print "sha256-" $1 }'
+}
+
+add-nixpkgs-remote() {
+  git remote add $1 git@github.com:$1/nixpkgs.git
+  git fetch $1
+}
+
