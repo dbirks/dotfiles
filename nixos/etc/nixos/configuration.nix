@@ -99,6 +99,7 @@
     virt-manager
     vscode
     youtube-dl
+    yubioath-desktop
     zoom-us
   ];
 
@@ -148,6 +149,7 @@
       core-shell.enable = true;
       core-utilities.enable = true;
     };
+    pcscd.enable = true; # for yubikey
     printing = {
       enable = true;
       drivers = with pkgs; [ gutenprint hplip ];
@@ -158,6 +160,7 @@
       #dataDir = "/home/david/syncthing";
       configDir = "/home/david/.config/syncthing";
     };
+    udev.packages = with pkgs; [ yubikey-personalization ];
     xserver = {
       enable = true;
       libinput.enable = true;
