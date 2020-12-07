@@ -2,8 +2,6 @@
 
 {
   imports = [
-    # Include the results of the hardware scan.
-    # <nixos-hardware/dell/xps/15-9560/intel>
     ./hardware-configuration.nix
   ];
 
