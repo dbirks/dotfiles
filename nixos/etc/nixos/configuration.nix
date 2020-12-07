@@ -64,6 +64,7 @@
     # lens
     libreoffice-fresh
     mpv
+    mtr
     ncdu
     neofetch
     nixfmt
