@@ -129,8 +129,6 @@
       dbeaver = pkgs.dbeaver.overrideAttrs
         (attrs: { patches = [ ./patches/dbeaver.patch ]; });
     };
-
-    permittedInsecurePackages = [ "python2.7-cryptography-2.9.2" ];
   };
 
   powerManagement.powertop.enable = true;
