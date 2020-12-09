@@ -22,6 +22,7 @@
     aws-iam-authenticator
     binutils-unwrapped
     chromium
+    croc
     dbeaver
     ddrescue
     dive
