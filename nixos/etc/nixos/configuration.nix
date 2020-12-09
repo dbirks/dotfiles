@@ -17,7 +17,6 @@
 
   environment.systemPackages = with pkgs; [
     alacritty
-    # android-studio
     ansible
     awscli2
     aws-iam-authenticator
@@ -39,7 +38,6 @@
     gitAndTools.gh
     gitAndTools.hub
     glances
-    # gnome3.gnome-shell
     gnome3.gnome-tweaks
     gnomeExtensions.appindicator
     gnomeExtensions.material-shell
@@ -48,13 +46,11 @@
     go
     go-bindata
     google-chrome
-    # goPackages.go
     grafana-loki
     htop
     inetutils
     jq
     kind
-    kpt
     krb5
     krita
     kubectl
@@ -67,7 +63,6 @@
     mtr
     ncdu
     neofetch
-    nixfmt
     nixpkgs-fmt
     nixpkgs-review
     nix-prefetch-git
@@ -78,7 +73,6 @@
     pinta
     postgresql
     powershell
-    # python2
     python3
     pythonPackages.boto3
     pythonPackages.botocore
@@ -90,7 +84,6 @@
     syncthing
     teams
     terraform_0_14
-    terragrunt
     thunderbird
     tilt
     tmux
