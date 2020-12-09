@@ -89,7 +89,7 @@
     stow
     syncthing
     teams
-    terraform_0_13
+    terraform_0_14
     terragrunt
     thunderbird
     tilt
