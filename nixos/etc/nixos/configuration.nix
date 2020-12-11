@@ -84,7 +84,7 @@
     stow
     syncthing
     teams
-    terraform_0_14
+    terraform_0_13
     thunderbird
     tilt
     tmux
