@@ -74,6 +74,7 @@
     pinta
     postgresql
     powershell
+    pulumi-bin
     python3
     pythonPackages.boto3
     pythonPackages.botocore
