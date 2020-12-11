@@ -142,3 +142,9 @@ add-nixpkgs-remote() {
   git fetch $1
 }
 
+backup-s3-bucket() {
+  mkdir $1
+  cd $1
+  aws s3 sync s3://$1 .
+  cd -
+}
