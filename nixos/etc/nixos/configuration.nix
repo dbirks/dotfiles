@@ -85,6 +85,7 @@
     stow
     syncthing
     teams
+    tektoncd-cli
     terraform_0_13
     thunderbird
     tilt
