@@ -21,6 +21,7 @@
     awscli2
     aws-iam-authenticator
     binutils-unwrapped
+    brave
     chromium
     croc
     dbeaver
