@@ -76,6 +76,7 @@
     postgresql
     powershell
     pulumi-bin
+    python2
     python3
     pythonPackages.boto3
     pythonPackages.botocore
