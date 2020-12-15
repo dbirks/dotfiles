@@ -81,6 +81,7 @@
     pythonPackages.boto3
     pythonPackages.botocore
     signal-desktop
+    simplescreenrecorder
     slack
     spotify
     ssmsh
