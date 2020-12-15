@@ -40,6 +40,7 @@
     gitAndTools.diff-so-fancy
     gitAndTools.gh
     gitAndTools.hub
+    git-lfs
     glances
     gnome3.gnome-tweaks
     gnomeExtensions.appindicator
