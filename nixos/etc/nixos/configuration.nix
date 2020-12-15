@@ -17,7 +17,7 @@
 
   environment.systemPackages = with pkgs; [
     alacritty
-    ansible
+    ansible_2_8
     awscli2
     aws-iam-authenticator
     binutils-unwrapped
@@ -86,6 +86,7 @@
     simplescreenrecorder
     slack
     spotify
+    sshpass
     ssmsh
     stow
     syncthing
