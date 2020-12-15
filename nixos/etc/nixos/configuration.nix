@@ -31,6 +31,7 @@
     eksctl
     element-desktop
     etcdctl
+    ffmpeg
     figlet
     file
     firefox-bin
