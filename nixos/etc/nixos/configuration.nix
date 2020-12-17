@@ -36,6 +36,7 @@
     file
     firefox-bin
     fzf
+    ghostscript
     git
     gitAndTools.diff-so-fancy
     gitAndTools.gh
