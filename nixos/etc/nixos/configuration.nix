@@ -84,6 +84,8 @@
     pythonPackages.boto3
     pythonPackages.botocore
     redis
+    shellcheck
+    shfmt
     signal-desktop
     simplescreenrecorder
     slack
