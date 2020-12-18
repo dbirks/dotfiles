@@ -97,6 +97,7 @@
     terraform_0_13
     thunderbird
     tilt
+    trivy
     tmux
     uget
     vim
