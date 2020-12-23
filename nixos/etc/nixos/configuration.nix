@@ -96,6 +96,7 @@
     syncthing
     teams
     tektoncd-cli
+    terminal-parrot
     terraform_0_13
     thunderbird
     tilt
