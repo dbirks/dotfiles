@@ -121,7 +121,10 @@
     terminus_font
   ];
 
-  hardware.pulseaudio.enable = true;
+  hardware = {
+    pulseaudio.enable = true;
+    sensor.iio.enable = true;
+  };
 
   networking = {
     interfaces.enp0s13f0u1u2.useDHCP = true;
