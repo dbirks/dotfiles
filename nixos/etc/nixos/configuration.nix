@@ -62,7 +62,7 @@
     kubectx
     kubernetes-helm
     ldns
-    # lens
+    lens
     libreoffice-fresh
     mpv
     mtr
