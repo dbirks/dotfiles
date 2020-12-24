@@ -26,6 +26,7 @@
     croc
     dbeaver
     ddrescue
+    dep2nix
     dive
     docker-compose
     eksctl
