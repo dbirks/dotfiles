@@ -157,23 +157,35 @@
       enable = true;
       nssmdns = true;
     };
+
     fwupd.enable = true;
+
     gnome3 = {
       core-os-services.enable = true;
       core-shell.enable = true;
       core-utilities.enable = true;
     };
+
     pcscd.enable = true; # for yubikey
+
     printing = {
       enable = true;
-      drivers = with pkgs; [ gutenprint hplip ];
+      drivers = with pkgs; [
+        gutenprint
+        hplip
+      ];
     };
+
     syncthing = {
       enable = true;
       user = "david";
       configDir = "/home/david/.config/syncthing";
     };
-    udev.packages = with pkgs; [ yubikey-personalization ];
+
+    udev.packages = with pkgs; [
+      yubikey-personalization
+    ];
+
     xserver = {
       enable = true;
       libinput.enable = true;
