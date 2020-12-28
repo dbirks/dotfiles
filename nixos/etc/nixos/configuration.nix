@@ -153,7 +153,10 @@
   };
 
   services = {
-    avahi.enable = true;
+    avahi = {
+      enable = true;
+      nssmdns = true;
+    };
     fwupd.enable = true;
     gnome3 = {
       core-os-services.enable = true;
