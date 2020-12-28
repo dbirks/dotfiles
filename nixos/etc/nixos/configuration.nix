@@ -65,6 +65,7 @@
     ldns
     lens
     libreoffice-fresh
+    meld
     mpv
     mtr
     ncdu
