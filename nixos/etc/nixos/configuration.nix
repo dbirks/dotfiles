@@ -56,6 +56,7 @@
     htop
     inetutils
     jq
+    k9s
     kind
     krb5
     krita
