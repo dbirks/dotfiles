@@ -106,6 +106,7 @@
     trivy
     tmux
     uget
+    vagrant
     vim
     virt-manager
     vscode
