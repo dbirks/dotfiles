@@ -106,6 +106,7 @@
     trivy
     tmux
     uget
+    unzip
     vagrant
     vim
     virt-manager
