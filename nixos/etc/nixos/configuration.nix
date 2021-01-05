@@ -31,6 +31,7 @@
     docker-compose
     eksctl
     element-desktop
+    envsubst
     etcdctl
     ffmpeg
     figlet
