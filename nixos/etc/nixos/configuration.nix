@@ -80,6 +80,7 @@
     openjdk11
     openssl
     pinta
+    podman
     postgresql
     powershell
     pulumi-bin
