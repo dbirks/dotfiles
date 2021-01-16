@@ -120,3 +120,14 @@ login-to-ecr() {
   aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
 }
 
+walk-git-history() {
+# Usage:
+#   walk-git-history <branch name>
+
+for commit in $(git rev-list $1 --reverse)
+do
+  git show $commit
+  read
+done
+}
+
