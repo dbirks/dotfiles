@@ -31,13 +31,13 @@
     docker-compose
     eksctl
     element-desktop
-    envsubst
     etcdctl
     ffmpeg
     figlet
     file
     firefox-bin
     fzf
+    gettext
     ghostscript
     git
     gitAndTools.diff-so-fancy
