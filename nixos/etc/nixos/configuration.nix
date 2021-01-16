@@ -133,6 +133,9 @@
   };
 
   networking = {
+    extraHosts = ''
+      127.0.0.1 placeholder.com
+    '';
     interfaces.enp0s13f0u1u2.useDHCP = true;
     # interfaces.wlp59s0.useDHCP = true;
     hostName = "sandpiper";
