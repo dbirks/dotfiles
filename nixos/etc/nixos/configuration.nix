@@ -80,7 +80,6 @@
     openjdk11
     openssl
     pinta
-    podman
     postgresql
     powershell
     pulumi-bin
@@ -213,5 +212,6 @@
   virtualisation = {
     docker.enable = true;
     libvirtd.enable = true;
+    podman.enable = true;
   };
 }
