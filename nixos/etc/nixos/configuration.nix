@@ -35,7 +35,7 @@
     ffmpeg
     figlet
     file
-    firefox-bin
+    firefox
     fzf
     gettext
     ghostscript
