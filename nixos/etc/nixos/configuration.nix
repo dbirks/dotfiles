@@ -83,6 +83,7 @@
     postgresql
     powershell
     pulumi-bin
+    pulseeffects
     python2
     python3
     pythonPackages.boto3
