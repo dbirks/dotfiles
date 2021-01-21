@@ -115,6 +115,7 @@
     vscode
     wireshark
     youtube-dl
+    yq
     yubioath-desktop
     zoom-us
   ];
