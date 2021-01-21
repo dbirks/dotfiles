@@ -112,6 +112,7 @@
     vim
     virt-manager
     vscode
+    wireshark
     youtube-dl
     yubioath-desktop
     zoom-us
