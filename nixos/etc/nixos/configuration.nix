@@ -59,6 +59,7 @@
     k9s
     kind
     krb5
+    krew
     krita
     kubectl
     kubectx
