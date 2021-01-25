@@ -12,6 +12,10 @@
       efi.canTouchEfiVariables = true;
       systemd-boot.enable = true;
     };
+    kernel.sysctl = {
+      # https://github.com/NixOS/nixpkgs/issues/36214
+      "max_user_instances" = 8192;
+    };
   };
 
   environment.systemPackages = with pkgs; [
