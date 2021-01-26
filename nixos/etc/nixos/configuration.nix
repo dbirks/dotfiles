@@ -225,7 +225,12 @@
 
   virtualisation = {
     docker.enable = true;
-    libvirtd.enable = true;
+    libvirtd = {
+      allowedBridges = [
+        "virbr0"
+      ];
+      enable = true;
+    };
     podman.enable = true;
   };
 }
