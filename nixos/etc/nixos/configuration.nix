@@ -80,6 +80,7 @@
     nixpkgs-review
     nix-prefetch-git
     nodejs-12_x
+    nmap
     openconnect
     openjdk11
     openssl
