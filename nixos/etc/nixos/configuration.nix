@@ -23,6 +23,7 @@
     ansible_2_8
     awscli2
     aws-iam-authenticator
+    bat
     binutils-unwrapped
     brave
     chromium
