@@ -71,6 +71,7 @@
     kubernetes-helm
     ldns
     lens
+    libimobiledevice
     libreoffice-fresh
     meld
     mpv
@@ -205,6 +206,8 @@
     udev.packages = with pkgs; [
       yubikey-personalization
     ];
+
+    usbmuxd.enable = true; # for connecting to iOS
 
     xserver = {
       enable = true;
