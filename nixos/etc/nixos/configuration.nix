@@ -95,6 +95,7 @@
     python3
     pythonPackages.boto3
     pythonPackages.botocore
+    qutebrowser
     redis
     shellcheck
     shfmt
