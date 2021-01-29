@@ -58,6 +58,7 @@
     go-bindata
     google-chrome
     gopls
+    goreleaser
     grafana-loki
     htop
     inetutils
