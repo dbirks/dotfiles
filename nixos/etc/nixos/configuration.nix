@@ -110,6 +110,7 @@
     stow
     syncthing
     teams
+    teamviewer
     tektoncd-cli
     terminal-parrot
     terraform_0_13
@@ -191,7 +192,6 @@
     };
 
     pcscd.enable = true; # for yubikey
-
     printing = {
       enable = true;
       drivers = with pkgs; [
@@ -205,6 +205,8 @@
       user = "david";
       configDir = "/home/david/.config/syncthing";
     };
+
+    teamviewer.enable = true;
 
     udev.packages = with pkgs; [
       yubikey-personalization
