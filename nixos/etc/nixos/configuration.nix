@@ -138,7 +138,8 @@
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    google-fonts
+    # google-fonts
+    recursive
     source-code-pro
     terminus_font
   ];
