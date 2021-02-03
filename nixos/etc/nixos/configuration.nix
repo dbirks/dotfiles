@@ -153,11 +153,14 @@
     extraHosts = ''
       127.0.0.1 placeholder.com
     '';
-    interfaces.enp0s13f0u1u2.useDHCP = true;
+    # interfaces.enp0s13f0u1u2.useDHCP = true;
+    interfaces.eth0.useDHCP = true;
     # interfaces.wlp59s0.useDHCP = true;
+    interfaces.wlan0.useDHCP = true;
     hostName = "sandpiper";
-    # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    networkmanager.enable = true;
     useDHCP = false;
+    usePredictableInterfaceNames = true;
   };
 
   nixpkgs.config = {
