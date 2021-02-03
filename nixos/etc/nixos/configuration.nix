@@ -36,6 +36,7 @@
     eksctl
     element-desktop
     etcdctl
+    evolutionWithPlugins
     ffmpeg
     figlet
     file
@@ -50,6 +51,7 @@
     git-lfs
     glances
     gnome3.gnome-tweaks
+    gnome3.seahorse
     gnomeExtensions.appindicator
     gnomeExtensions.material-shell
     gnumake
@@ -171,11 +173,22 @@
   programs = {
     dconf.enable = true;
 
+    evolution = {
+      enable = true;
+      plugins = with pkgs; [
+        evolution-ews
+      ];
+    };
+
+    seahorse.enable = true;
+
     gnupg.agent = {
       enable = true;
       #enableSSHSupport = true;
       pinentryFlavor = "gnome3";
     };
+
+    nm-applet.enable = true;
   };
 
   services = {
@@ -190,9 +203,12 @@
       core-os-services.enable = true;
       core-shell.enable = true;
       core-utilities.enable = true;
+      evolution-data-server.enable = true;
+      gnome-keyring.enable = true;
     };
 
     pcscd.enable = true; # for yubikey
+
     printing = {
       enable = true;
       drivers = with pkgs; [
@@ -222,6 +238,8 @@
       desktopManager.gnome3.enable = true;
     };
   };
+
+  security.pam.services.gdm.enableGnomeKeyring = true;
 
   sound.enable = true;
 
