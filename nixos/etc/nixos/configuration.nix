@@ -89,6 +89,7 @@
     nmap
     openconnect
     openjdk11
+    openldap
     openssl
     pinta
     postgresql
