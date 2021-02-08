@@ -21,6 +21,7 @@
   environment.systemPackages = with pkgs; [
     alacritty
     ansible_2_8
+    appimage-run
     awscli2
     aws-iam-authenticator
     bat
