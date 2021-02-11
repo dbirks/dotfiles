@@ -129,6 +129,7 @@
     virt-manager
     vscode
     wireshark
+    yarn
     youtube-dl
     yq-go
     yubioath-desktop
