@@ -96,7 +96,7 @@
     postgresql
     powershell
     pulumi-bin
-    pulseeffects
+    pulseeffects-legacy
     python2
     python3
     pythonPackages.boto3
