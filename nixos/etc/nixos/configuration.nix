@@ -63,6 +63,7 @@
     gopls
     goreleaser
     grafana-loki
+    hey
     htop
     inetutils
     jq
