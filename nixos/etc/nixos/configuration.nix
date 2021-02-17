@@ -169,10 +169,10 @@
   nixpkgs.config = {
     allowUnfree = true;
 
-    packageOverrides = pkgs: rec {
-      dbeaver = pkgs.dbeaver.overrideAttrs
-        (attrs: { patches = [ ./patches/dbeaver.patch ]; });
-    };
+    # packageOverrides = pkgs: rec {
+    #   dbeaver = pkgs.dbeaver.overrideAttrs
+    #     (attrs: { patches = [ ./patches/dbeaver.patch ]; });
+    # };
   };
 
   powerManagement.powertop.enable = true;
