@@ -2,11 +2,12 @@
 
 {
   imports = [
+    <nixos-hardware/dell/xps/13-9310>
     ./hardware-configuration.nix
   ];
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+    # kernelPackages = pkgs.linuxPackages_latest;
     # kernelPackages = pkgs.linuxPackages_testing;
     loader = {
       efi.canTouchEfiVariables = true;
