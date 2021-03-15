@@ -158,6 +158,11 @@
     extraHosts = ''
       127.0.0.1 placeholder.com
     '';
+    firewall = {
+      allowedTCPPorts = [ 80 ];
+      allowPing = false;
+      enable = true;
+    };
     # interfaces.enp0s13f0u1u2.useDHCP = true;
     interfaces.eth0.useDHCP = true;
     # interfaces.wlp59s0.useDHCP = true;
