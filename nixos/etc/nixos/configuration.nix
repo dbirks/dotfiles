@@ -154,6 +154,13 @@
     sensor.iio.enable = true;
   };
 
+  i18n.inputMethod = {
+    enabled = "ibus";
+    ibus.engines = with pkgs.ibus-engines; [
+      libpinyin
+    ];
+  };
+
   networking = {
     extraHosts = ''
       127.0.0.1 placeholder.com
