@@ -39,6 +39,7 @@
     figlet
     file
     firefox-beta-bin
+    fluxcd
     fzf
     gettext
     ghostscript
