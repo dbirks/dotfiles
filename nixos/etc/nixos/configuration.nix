@@ -22,22 +22,18 @@
   environment.systemPackages = with pkgs; [
     alacritty
     ansible_2_8
-    appimage-run
     awscli2
     aws-iam-authenticator
     bat
     binutils-unwrapped
     brave
     chromium
-    croc
     dbeaver
     ddrescue
-    dep2nix
     dive
     docker-compose
     eksctl
     element-desktop
-    etcdctl
     evolutionWithPlugins
     ffmpeg
     figlet
@@ -59,9 +55,7 @@
     gnumake
     gnupg
     go
-    go-bindata
     google-chrome
-    gopls
     goreleaser
     grafana-loki
     hey
@@ -97,7 +91,6 @@
     pinta
     postgresql
     powershell
-    pulumi-bin
     pulseeffects-legacy
     python2
     python3
@@ -117,12 +110,10 @@
     syncthing
     teams
     teamviewer
-    tektoncd-cli
     terminal-parrot
     terraform_0_14
     thunderbird
     tilt
-    trivy
     tmux
     uget
     unzip
