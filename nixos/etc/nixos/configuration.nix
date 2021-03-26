@@ -41,6 +41,7 @@
     firefox-beta-bin
     fluxcd
     fzf
+    gawk
     gettext
     ghostscript
     git
