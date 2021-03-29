@@ -160,18 +160,18 @@ export PATH="${PATH}:${HOME}/.krew/bin"
 
 # Currently depends on the target branch being `main`
 ff-merge() {
-# Usage:
-#   ff-merge <branch name>
+  # Usage:
+  #   ff-merge <branch name>
 
-set -o errexit
+  set -o errexit
 
-BRANCH=$1
+  BRANCH=$1
 
-git fetch -p
-git checkout main
-git pull
+  git fetch -p
+  git checkout main
+  git pull
 
-git merge --ff-only origin/$BRANCH
+  git merge --ff-only origin/$BRANCH
 
-git push
+  git push
 }
