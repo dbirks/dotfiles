@@ -175,3 +175,11 @@ ff-merge() {
 
   git push
 }
+
+# Print a given AWS Parameter Store value
+get-param() {
+  # Usage:
+  #   get-param <parameter store path>
+
+  aws ssm get-parameters --names "$1" --with-decryption --query Parameters[].Value --output text
+}
