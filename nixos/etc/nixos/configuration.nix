@@ -194,8 +194,6 @@
       ];
     };
 
-    seahorse.enable = true;
-
     geary.enable = false;
 
     gnupg.agent = {
@@ -205,6 +203,8 @@
     };
 
     nm-applet.enable = true;
+
+    seahorse.enable = true;
   };
 
   services = {
