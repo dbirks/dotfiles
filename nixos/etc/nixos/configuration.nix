@@ -196,6 +196,8 @@
 
     seahorse.enable = true;
 
+    geary.enable = false;
+
     gnupg.agent = {
       enable = true;
       #enableSSHSupport = true;
