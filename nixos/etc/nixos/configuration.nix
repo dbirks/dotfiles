@@ -28,6 +28,7 @@
     binutils-unwrapped
     brave
     chromium
+    cifs-utils
     dbeaver
     ddrescue
     dive
