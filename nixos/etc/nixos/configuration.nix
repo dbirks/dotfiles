@@ -52,6 +52,7 @@
     git-lfs
     glances
     gnome3.gnome-tweaks
+    gnome3.pomodoro
     gnome3.seahorse
     gnomeExtensions.appindicator
     gnomeExtensions.material-shell
