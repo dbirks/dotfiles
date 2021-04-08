@@ -142,7 +142,6 @@
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    google-fonts
     source-code-pro
     terminus_font
   ];
