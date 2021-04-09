@@ -4,6 +4,7 @@
   imports = [
     <nixos-hardware/dell/xps/13-9310>
     ./hardware-configuration.nix
+    ./secret.nix
   ];
 
   boot = {
