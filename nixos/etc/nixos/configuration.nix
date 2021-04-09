@@ -57,6 +57,7 @@
       gitAndTools.diff-so-fancy
       gitAndTools.gh
       gitAndTools.hub
+      git-crypt
       git-lfs
       glances
       gnome3.gnome-tweaks
