@@ -27,6 +27,20 @@
         boto3
         botocore
       ];
+
+      vscode-with-extensions = pkgs.vscode-with-extensions.override {
+        vscodeExtensions = with pkgs.vscode-extensions; [
+          ms-vsliveshare.vsliveshare
+          golang.Go
+          bbenoist.Nix
+          vscodevim.vim
+          redhat.vscode-yaml
+          hashicorp.terraform
+          esbenp.prettier-vscode
+          yzhang.markdown-all-in-one
+          github.github-vscode-theme
+        ];
+      };
     in
     with pkgs; [
       (python3.withPackages myPythonPackages)
@@ -130,7 +144,7 @@
       vagrant
       vim
       virt-manager
-      vscode
+      vscode-with-extensions
       wireshark
       yarn
       youtube-dl
