@@ -35,6 +35,7 @@
           github.github-vscode-theme
           golang.Go
           hashicorp.terraform
+          jnoortheen.nix-ide
           ms-vsliveshare.vsliveshare
           redhat.vscode-yaml
           vscodevim.vim
