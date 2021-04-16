@@ -32,6 +32,7 @@
         vscodeExtensions = with pkgs.vscode-extensions; [
           bbenoist.Nix
           esbenp.prettier-vscode
+          foxundermoon.shell-format
           github.github-vscode-theme
           golang.Go
           hashicorp.terraform
