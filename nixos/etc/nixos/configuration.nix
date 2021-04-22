@@ -133,6 +133,7 @@
       spotify
       sshpass
       ssmsh
+      starship
       stow
       syncthing
       teams
