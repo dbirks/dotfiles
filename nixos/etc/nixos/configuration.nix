@@ -56,6 +56,7 @@
       cifs-utils
       dbeaver
       ddrescue
+      direnv
       dive
       docker-compose
       eksctl
