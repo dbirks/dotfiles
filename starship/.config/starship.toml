@@ -1,0 +1,15 @@
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+[aws]
+disabled = true
+
+[character]
+success_symbol = "[>](bold green) "
+error_symbol = "[>](bold red) "
+
+[directory]
+truncate_to_repo = false
+
+[nodejs]
+disabled = true

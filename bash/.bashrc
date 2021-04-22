@@ -183,3 +183,5 @@ get-param() {
 
   aws ssm get-parameters --names "$1" --with-decryption --query Parameters[].Value --output text
 }
+
+eval "$(starship init bash)"
