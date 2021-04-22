@@ -109,6 +109,7 @@
       mtr
       ncdu
       neofetch
+      nerdfonts
       nixpkgs-fmt
       nixpkgs-review
       nix-prefetch-git
