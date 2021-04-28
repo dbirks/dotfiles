@@ -67,6 +67,7 @@
       file
       firefox-beta-bin
       fluxcd
+      fontforge
       fzf
       gawk
       gettext
