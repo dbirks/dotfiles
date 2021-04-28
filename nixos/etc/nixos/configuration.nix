@@ -119,6 +119,7 @@
       nix-prefetch-git
       nodejs-12_x
       nmap
+      obs-studio
       openconnect
       openjdk11
       openldap
