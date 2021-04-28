@@ -68,6 +68,8 @@
       firefox-beta-bin
       fluxcd
       fontforge
+      fontforge-gtk
+      fontforge-fonttools
       fzf
       gawk
       gettext
