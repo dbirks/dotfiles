@@ -97,6 +97,7 @@
       inetutils
       jq
       k9s
+      keybase-gui
       kind
       krb5
       krew
