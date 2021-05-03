@@ -65,7 +65,7 @@
       ffmpeg
       figlet
       file
-      firefox-beta-bin
+      firefox
       fluxcd
       fontforge
       fontforge-gtk
