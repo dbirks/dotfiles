@@ -145,7 +145,7 @@
       teams
       teamviewer
       terminal-parrot
-      terraform_0_14
+      terraform_0_15
       thunderbird
       tilt
       tmux
