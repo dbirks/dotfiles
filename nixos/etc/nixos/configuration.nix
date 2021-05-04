@@ -129,6 +129,7 @@
       postgresql
       powershell
       pulseeffects-legacy
+      pulumi-bin
       qutebrowser
       redis
       shellcheck
