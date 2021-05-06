@@ -17,6 +17,9 @@
     kernel.sysctl = {
       # https://github.com/NixOS/nixpkgs/issues/36214
       "max_user_instances" = 8192;
+
+      # https://stackoverflow.com/a/41453306/7733616
+      "net.ipv4.ip_forward" = 1;
     };
   };
 
