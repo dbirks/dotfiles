@@ -113,6 +113,7 @@
       libimobiledevice
       libreoffice-fresh
       meld
+      moreutils
       mpv
       mtr
       ncdu
