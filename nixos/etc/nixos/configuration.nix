@@ -149,7 +149,6 @@
       stow
       syncthing
       teams
-      teamviewer
       terminal-parrot
       terraform_0_15
       thunderbird
