@@ -256,6 +256,12 @@
 
     pcscd.enable = true; # for yubikey
 
+    # Fixes the error:
+    #   Failed assertions:
+    #   - You have set services.power-profiles-daemon.enable = true;
+    #   which conflicts with services.tlp.enable = true;
+    power-profiles-daemon.enable = false;
+
     printing = {
       enable = true;
       drivers = with pkgs; [
