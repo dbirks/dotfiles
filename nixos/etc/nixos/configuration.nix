@@ -62,6 +62,7 @@
       direnv
       dive
       docker-compose
+      dmidecode
       eksctl
       element-desktop
       evolutionWithPlugins
