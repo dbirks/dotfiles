@@ -251,7 +251,7 @@
 
     fwupd.enable = true;
 
-    gnome3 = {
+    gnome = {
       core-os-services.enable = true;
       core-shell.enable = true;
       core-utilities.enable = true;
@@ -293,7 +293,7 @@
       enable = true;
       libinput.enable = true;
       displayManager.gdm.enable = true;
-      desktopManager.gnome3.enable = true;
+      desktopManager.gnome.enable = true;
     };
   };
 
