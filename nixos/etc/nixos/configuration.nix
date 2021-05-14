@@ -37,6 +37,7 @@
           esbenp.prettier-vscode
           foxundermoon.shell-format
           github.github-vscode-theme
+          github.vscode-pull-request-github
           golang.Go
           hashicorp.terraform
           jnoortheen.nix-ide
