@@ -40,6 +40,7 @@
           github.vscode-pull-request-github
           golang.Go
           hashicorp.terraform
+          iciclesoft.workspacesort
           jnoortheen.nix-ide
           ms-python.python
           ms-vsliveshare.vsliveshare
