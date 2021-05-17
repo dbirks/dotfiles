@@ -78,6 +78,7 @@
       fzf
       gawk
       gettext
+      gcc
       ghostscript
       git
       gitAndTools.diff-so-fancy
