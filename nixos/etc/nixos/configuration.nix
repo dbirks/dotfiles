@@ -124,6 +124,7 @@
       nixpkgs-fmt
       nixpkgs-review
       nix-prefetch-git
+      nix-update
       nodejs-12_x
       nmap
       obs-studio
