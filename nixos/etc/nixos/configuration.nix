@@ -41,6 +41,7 @@
           golang.Go
           hashicorp.terraform
           jnoortheen.nix-ide
+          ms-python.python
           ms-vsliveshare.vsliveshare
           redhat.vscode-yaml
           vscodevim.vim
