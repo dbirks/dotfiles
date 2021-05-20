@@ -45,6 +45,7 @@
           ms-python.python
           ms-vsliveshare.vsliveshare
           redhat.vscode-yaml
+          stephlin.vscode-tmux-keybinding
           vscodevim.vim
           yzhang.markdown-all-in-one
         ];
