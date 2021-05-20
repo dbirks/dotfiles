@@ -88,6 +88,7 @@
       git-crypt
       git-lfs
       glances
+      glib # for glib-compile-schemas
       gnome3.gnome-tweaks
       gnome3.pomodoro
       gnome3.seahorse
