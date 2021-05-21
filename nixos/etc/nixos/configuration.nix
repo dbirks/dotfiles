@@ -173,6 +173,7 @@
       youtube-dl
       yq-go
       yubioath-desktop
+      zip
       zoom-us
     ];
 
