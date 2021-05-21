@@ -92,10 +92,10 @@
       glances
       glib # for glib-compile-schemas
       gnome3.gnome-tweaks
-      gnome3.pomodoro
+      # gnome3.pomodoro
       gnome3.seahorse
-      gnomeExtensions.appindicator
-      gnomeExtensions.material-shell
+      # gnomeExtensions.appindicator
+      # gnomeExtensions.material-shell
       gnumake
       gnupg
       go
