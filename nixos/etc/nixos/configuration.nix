@@ -120,6 +120,7 @@
       libimobiledevice
       libreoffice-fresh
       meld
+      microplane
       moreutils
       mpv
       mtr
