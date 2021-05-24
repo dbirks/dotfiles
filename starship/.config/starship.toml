@@ -11,5 +11,12 @@ error_symbol = "[>](bold red)"
 [directory]
 truncate_to_repo = false
 
+[git_status]
+disabled = true
+
+[golang]
+disabled = true
+
 [nodejs]
 disabled = true
+
