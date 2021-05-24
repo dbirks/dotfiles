@@ -146,6 +146,7 @@
       pulumi-bin
       qutebrowser
       redis
+      remmina
       shellcheck
       shfmt
       signal-desktop
