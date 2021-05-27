@@ -119,6 +119,7 @@
       lens
       libimobiledevice
       libreoffice-fresh
+      lsof
       meld
       microplane
       moreutils
