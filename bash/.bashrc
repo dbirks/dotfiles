@@ -187,3 +187,6 @@ get-param() {
 eval "$(starship init bash)"
 
 eval "$(direnv hook bash)"
+
+# Display colors in less by default
+export LESS="-R"
