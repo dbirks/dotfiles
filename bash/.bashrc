@@ -14,7 +14,9 @@ export TERM=xterm-256color
 #export TERM=screen-256color-bce
 export PAGER=less
 [ -n "$TMUX" ] && export TERM=screen-256color
-export PATH=$PATH:~/.local/bin/
+
+# Add local bins and go bins to the path
+export PATH=$PATH:~/.local/bin/:~/go/bin
 
 # locale exports
 export LANG=en_US.UTF-8
