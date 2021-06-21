@@ -287,8 +287,6 @@
       configDir = "/home/david/.config/syncthing";
     };
 
-    teamviewer.enable = true;
-
     udev.packages = with pkgs; [
       yubikey-personalization
     ];
