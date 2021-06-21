@@ -210,9 +210,7 @@
       allowPing = false;
       enable = true;
     };
-    # interfaces.enp0s13f0u1u2.useDHCP = true;
     interfaces.eth0.useDHCP = true;
-    # interfaces.wlp59s0.useDHCP = true;
     interfaces.wlan0.useDHCP = true;
     hostName = "sandpiper";
     networkmanager.enable = true;
