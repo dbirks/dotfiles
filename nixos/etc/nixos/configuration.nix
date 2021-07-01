@@ -299,7 +299,10 @@
     };
   };
 
-  security.pam.services.gdm.enableGnomeKeyring = true;
+  security = {
+    apparmor.enable = true;
+    pam.services.gdm.enableGnomeKeyring = true;
+  };
 
   sound.enable = true;
 
