@@ -34,6 +34,7 @@
       vscode-with-extensions = pkgs.vscode-with-extensions.override {
         vscodeExtensions = with pkgs.vscode-extensions; [
           bbenoist.Nix
+          dbaeumer.vscode-eslint
           esbenp.prettier-vscode
           foxundermoon.shell-format
           github.github-vscode-theme
