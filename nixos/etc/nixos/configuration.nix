@@ -63,6 +63,7 @@
       brave
       chromium
       cifs-utils
+      cypress
       dbeaver
       ddrescue
       direnv
