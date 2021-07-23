@@ -56,6 +56,7 @@
       (python3.withPackages myPythonPackages)
       alacritty
       awscli2
+      awslogs
       aws-iam-authenticator
       bat
       binutils-unwrapped
