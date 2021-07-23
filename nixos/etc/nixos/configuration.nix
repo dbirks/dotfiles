@@ -146,6 +146,7 @@
       openssl
       pinta
       postgresql
+      postman
       powershell
       pulseeffects-legacy
       pulumi-bin
