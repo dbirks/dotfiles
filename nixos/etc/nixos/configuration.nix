@@ -75,6 +75,7 @@
       figlet
       file
       firefox
+      flameshot
       fluxcd
       fontforge
       fontforge-gtk
