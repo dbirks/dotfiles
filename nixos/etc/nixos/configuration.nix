@@ -33,13 +33,13 @@
 
       vscode-with-extensions = pkgs.vscode-with-extensions.override {
         vscodeExtensions = with pkgs.vscode-extensions; [
-          bbenoist.Nix
+          bbenoist.nix
           dbaeumer.vscode-eslint
           esbenp.prettier-vscode
           foxundermoon.shell-format
           github.github-vscode-theme
           github.vscode-pull-request-github
-          golang.Go
+          golang.go
           hashicorp.terraform
           iciclesoft.workspacesort
           jnoortheen.nix-ide
