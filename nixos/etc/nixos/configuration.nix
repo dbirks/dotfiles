@@ -98,8 +98,8 @@
       gnome3.gnome-tweaks
       # gnome3.pomodoro
       gnome3.seahorse
-      # gnomeExtensions.appindicator
-      # gnomeExtensions.material-shell
+      gnomeExtensions.appindicator
+      # gnome40Extensions."material-shell@papyelgringo"
       gnumake
       gnupg
       go
