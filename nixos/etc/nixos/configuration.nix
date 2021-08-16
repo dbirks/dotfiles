@@ -144,6 +144,7 @@
       openjdk11
       openldap
       openssl
+      pgbadger
       pinta
       postgresql
       postman
