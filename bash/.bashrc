@@ -192,3 +192,6 @@ eval "$(direnv hook bash)"
 
 # Display colors in less by default
 export LESS="-R"
+
+alias cypress="Cypress"
+
