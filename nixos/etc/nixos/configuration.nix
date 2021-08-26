@@ -140,6 +140,7 @@
       nodePackages.node2nix
       nmap
       obs-studio
+      obsidian
       openconnect
       openjdk11
       openldap
