@@ -31,26 +31,26 @@
         botocore
       ];
 
-      vscode-with-extensions = pkgs.vscode-with-extensions.override {
-        vscodeExtensions = with pkgs.vscode-extensions; [
-          bbenoist.nix
-          dbaeumer.vscode-eslint
-          esbenp.prettier-vscode
-          foxundermoon.shell-format
-          github.github-vscode-theme
-          github.vscode-pull-request-github
-          golang.go
-          hashicorp.terraform
-          iciclesoft.workspacesort
-          jnoortheen.nix-ide
-          ms-python.python
-          ms-vsliveshare.vsliveshare
-          redhat.vscode-yaml
-          stephlin.vscode-tmux-keybinding
-          vscodevim.vim
-          yzhang.markdown-all-in-one
-        ];
-      };
+      # vscode-with-extensions = pkgs.vscode-with-extensions.override {
+      #   vscodeExtensions = with pkgs.vscode-extensions; [
+      #     bbenoist.nix
+      #     dbaeumer.vscode-eslint
+      #     esbenp.prettier-vscode
+      #     foxundermoon.shell-format
+      #     github.github-vscode-theme
+      #     github.vscode-pull-request-github
+      #     golang.go
+      #     hashicorp.terraform
+      #     iciclesoft.workspacesort
+      #     jnoortheen.nix-ide
+      #     ms-python.python
+      #     ms-vsliveshare.vsliveshare
+      #     redhat.vscode-yaml
+      #     stephlin.vscode-tmux-keybinding
+      #     vscodevim.vim
+      #     yzhang.markdown-all-in-one
+      #   ];
+      # };
     in
     with pkgs; [
       (python3.withPackages myPythonPackages)
@@ -177,7 +177,8 @@
       vagrant
       vim
       virt-manager
-      vscode-with-extensions
+      # vscode-with-extensions
+      vscode-fhs
       wireshark
       yarn
       youtube-dl
