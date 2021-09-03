@@ -54,6 +54,7 @@
     in
     with pkgs; [
       (python3.withPackages myPythonPackages)
+      act
       alacritty
       awscli2
       awslogs
