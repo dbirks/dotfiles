@@ -137,7 +137,8 @@
       nixpkgs-review
       nix-prefetch-git
       nix-update
-      nodejs-12_x
+      # nodejs-12_x
+      nodejs-16_x
       nodePackages.node2nix
       nmap
       obs-studio
