@@ -151,7 +151,7 @@
       pinta
       postgresql
       postman
-      pulseeffects-legacy
+      # pulseeffects-legacy
       pulumi-bin
       qutebrowser
       redis
@@ -199,7 +199,7 @@
   ];
 
   hardware = {
-    pulseaudio.enable = true;
+    pulseaudio.enable = false; # switching to pipewire
     sensor.iio.enable = true;
   };
 
@@ -274,6 +274,14 @@
 
     pcscd.enable = true; # for yubikey
 
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      media-session.enable = true;
+    };
+
     # Fixes the error:
     #   Failed assertions:
     #   - You have set services.power-profiles-daemon.enable = true;
@@ -311,6 +319,7 @@
   security = {
     apparmor.enable = true;
     pam.services.gdm.enableGnomeKeyring = true;
+    rtkit.enable = true; # enabling when switching to pipewire
   };
 
   sound.enable = true;
