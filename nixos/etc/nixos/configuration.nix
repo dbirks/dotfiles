@@ -62,6 +62,7 @@
       bat
       binutils-unwrapped
       brave
+      chamber
       chromium
       cifs-utils
       cypress
