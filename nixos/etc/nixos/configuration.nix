@@ -231,11 +231,17 @@
   nix = {
     autoOptimiseStore = true;
 
+    extraOptions = ''
+      experimental-features= = nix-command
+    '';
+
     gc = {
       automatic = true;
       dates = "weekly";
       options = "--delete-older-than 30d";
     };
+
+    package = pkgs.nixUnstable; # needed until nix 2.4 is released
   };
 
   nixpkgs.config = {
