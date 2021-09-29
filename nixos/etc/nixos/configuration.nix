@@ -232,7 +232,7 @@
     autoOptimiseStore = true;
 
     extraOptions = ''
-      experimental-features= = nix-command
+      experimental-features = nix-command
     '';
 
     gc = {
