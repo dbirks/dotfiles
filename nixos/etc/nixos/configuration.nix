@@ -152,7 +152,7 @@
       pinta
       postgresql
       postman
-      pulseeffects-legacy
+      # pulseeffects-legacy
       pulumi-bin
       qutebrowser
       redis
