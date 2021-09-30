@@ -141,6 +141,7 @@
       nodejs-12_x
       # nodejs-16_x
       nodePackages.node2nix
+      nodePackages.npm
       nmap
       obs-studio
       obsidian
