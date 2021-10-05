@@ -138,8 +138,7 @@
       nixpkgs-review
       nix-prefetch-git
       nix-update
-      nodejs-12_x
-      # nodejs-16_x
+      nodejs-slim-12_x
       nodePackages.node2nix
       nodePackages.npm
       nmap
