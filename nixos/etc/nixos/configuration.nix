@@ -126,6 +126,7 @@
       libimobiledevice
       libreoffice-fresh
       lsof
+      maven
       meld
       microplane
       moreutils
