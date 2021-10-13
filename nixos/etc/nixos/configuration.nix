@@ -154,7 +154,7 @@
       postgresql
       postman
       # pulseeffects-legacy
-      pulumi-bin
+      #pulumi-bin
       qutebrowser
       redis
       remmina
