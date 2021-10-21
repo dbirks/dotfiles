@@ -68,6 +68,7 @@
       cypress
       dbeaver
       ddrescue
+      deja-dup
       direnv
       dive
       docker-compose
