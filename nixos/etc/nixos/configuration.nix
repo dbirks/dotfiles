@@ -139,9 +139,10 @@
       nixpkgs-review
       nix-prefetch-git
       nix-update
-      nodejs-slim-12_x
+      # nodejs-slim-12_x
+      nodejs-16_x
       nodePackages.node2nix
-      nodePackages.npm
+      # nodePackages.npm
       nmap
       obs-studio
       obsidian
