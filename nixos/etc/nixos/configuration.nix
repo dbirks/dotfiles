@@ -75,6 +75,7 @@
       dmidecode
       eksctl
       element-desktop
+      etcher
       evolutionWithPlugins
       ffmpeg
       figlet
@@ -160,6 +161,7 @@
       qutebrowser
       redis
       remmina
+      rpi-imager
       shellcheck
       shfmt
       signal-desktop
