@@ -109,6 +109,7 @@
       go
       google-chrome
       goreleaser
+      gradle
       grafana-loki
       hey
       htop
@@ -149,7 +150,7 @@
       obs-studio
       obsidian
       openconnect
-      openjdk11
+      openjdk8
       openldap
       openssl
       pgbadger
