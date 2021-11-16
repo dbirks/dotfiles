@@ -109,7 +109,7 @@ in
       # gnome3.pomodoro
       gnome3.seahorse
       gnomeExtensions.appindicator
-      # gnome40Extensions."material-shell@papyelgringo"
+      gnomeExtensions.material-shell
       gnumake
       gnupg
       go
