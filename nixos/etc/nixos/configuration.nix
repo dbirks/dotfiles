@@ -86,7 +86,7 @@ in
       ffmpeg
       figlet
       file
-      firefox
+      firefox-bin
       flameshot
       fluxcd
       fontforge
