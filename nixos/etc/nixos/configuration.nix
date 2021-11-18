@@ -120,6 +120,7 @@ in
       hey
       htop
       inetutils
+      insomnia
       jq
       k9s
       keybase-gui
