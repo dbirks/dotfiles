@@ -151,7 +151,8 @@ in
       nix-prefetch-git
       nix-update
       unstablePinned.nodejs-16_x
-      nodePackages.node2nix
+      # nodejs-slim-12_x
+      # unstablePinned.nodePackages.npm
       nmap
       obs-studio
       obsidian
