@@ -136,6 +136,7 @@ in
       libimobiledevice
       libreoffice-fresh
       lsof
+      magic-wormhole
       maven
       meld
       microplane
