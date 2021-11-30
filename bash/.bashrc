@@ -200,3 +200,8 @@ export CHAMBER_KMS_KEY_ALIAS=aws/ssm
 
 alias lscmd='cat package.json | jq ".scripts"'
 
+# Enable fzf completion
+if command -v fzf-share >/dev/null; then
+  source "$(fzf-share)/key-bindings.bash"
+  source "$(fzf-share)/completion.bash"
+fi
