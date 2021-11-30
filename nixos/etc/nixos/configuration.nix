@@ -173,6 +173,7 @@ in
       shellcheck
       shfmt
       signal-desktop
+      silver-searcher
       simplescreenrecorder
       slack
       spotify
