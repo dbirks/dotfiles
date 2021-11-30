@@ -198,3 +198,5 @@ alias cypress="Cypress"
 # Make the chamber cli use the default KMS key for Parameter Store by default
 export CHAMBER_KMS_KEY_ALIAS=aws/ssm
 
+alias lscmd='cat package.json | jq ".scripts"'
+
