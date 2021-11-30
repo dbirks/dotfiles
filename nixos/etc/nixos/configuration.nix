@@ -157,7 +157,7 @@ in
       obs-studio
       obsidian
       openconnect
-      openjdk8
+      openjdk11
       openldap
       openssl
       pgbadger
