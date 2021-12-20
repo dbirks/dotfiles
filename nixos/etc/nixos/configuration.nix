@@ -71,6 +71,7 @@ in
       chamber
       chromium
       cifs-utils
+      conda
       cypress
       dbeaver
       ddrescue
