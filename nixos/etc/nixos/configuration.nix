@@ -185,7 +185,7 @@ in
       syncthing
       teams
       terminal-parrot
-      terraform_1_0
+      terraform_1
       thunderbird
       tilt
       tmux
