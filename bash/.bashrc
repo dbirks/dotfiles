@@ -205,3 +205,10 @@ if command -v fzf-share >/dev/null; then
   source "$(fzf-share)/key-bindings.bash"
   source "$(fzf-share)/completion.bash"
 fi
+
+# Load nvm
+# Hash fix as seen in: https://github.com/nvm-sh/nvm/issues/2065
+set -o hashall #
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
