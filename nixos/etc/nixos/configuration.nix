@@ -1,5 +1,11 @@
 { config, pkgs, options, ... }:
 
+let
+  unstablePinned = import (builtins.fetchTarball https://github.com/NixOS/nixpkgs/archive/8e1eab9eae4278c9bb1dcae426848a581943db5a.tar.gz) {
+    config.allowUnfree = true;
+  };
+in
+
 {
   imports = [
     <nixos-hardware/dell/xps/13-9310>
@@ -146,6 +152,9 @@
       nixpkgs-review
       nix-prefetch-git
       nix-update
+      unstablePinned.nodejs-16_x
+      # nodejs-slim-12_x
+      # unstablePinned.nodePackages.npm
       nmap
       obs-studio
       obsidian
