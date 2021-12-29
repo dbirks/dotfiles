@@ -205,3 +205,6 @@ if command -v fzf-share >/dev/null; then
   source "$(fzf-share)/key-bindings.bash"
   source "$(fzf-share)/completion.bash"
 fi
+
+alias bump='git commit -m "Empty commit" --allow-empty && git push'
+
