@@ -23,13 +23,13 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# # start ssh-agent
-# if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-#     ssh-agent > /tmp/ssh-agent-thing
-# fi
-# if [[ "$SSH_AGENT_PID" == "" ]]; then
-#     eval "$(</tmp/ssh-agent-thing)" >/dev/null
-# fi
+# start ssh-agent
+if [ $(pgrep -u $USER ssh-agent | wc -l) -eq 0 ]; then
+    ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+fi
+if [[ ! $SSH_AUTH_SOCK ]]; then
+    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+fi
 
 # print_git_branch_for_prompt() {
 #   BRANCH=$(git symbolic-ref --short HEAD 2>/dev/null)
