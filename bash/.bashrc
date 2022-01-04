@@ -31,34 +31,6 @@ if [[ ! $SSH_AUTH_SOCK ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
-# print_git_branch_for_prompt() {
-#   BRANCH=$(git symbolic-ref --short HEAD 2>/dev/null)
-
-#   # Only output something if we get a branch
-#   if [ -n $BRANCH ]
-#   then
-#     echo -n "「$BRANCH」"
-#   fi
-# }
-
-bold="\[$(tput bold)\]"
-italics="\[$(tput sitm)\]"
-reset="\[$(tput sgr0)\]"
-
-red="\[$(tput setaf 1)\]"
-green="\[$(tput setaf 2)\]"
-yellow="\[$(tput setaf 3)\]"
-blue="\[$(tput setaf 4)\]"
-purple="\[$(tput setaf 5)\]"
-cyan="\[$(tput setaf 6)\]"
-white="\[$(tput setaf 7)\]"
-
-# export PS1="${blue}\u@\h ${bold}${italics}${purple}\w ${reset}${bold}${white}$(git symbolic-ref --short HEAD 2>/dev/null) \$${reset} "
-export PS1="${blue}\u@\h ${bold}${italics}${purple}\w ${reset}${bold}${white}\$${reset} "
-
-# export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput sgr0)\]\[$(tput setaf 5)\]\[$(tput sitm)\]\w\[$(tput sgr0)\]\[$(tput bold)\]\[$(tput setaf 1)\]]\[$(tput setaf 7)\]「\$(git symbolic-ref --short HEAD 2>/dev/null)」$ \[$(tput sgr0)\]"
-# export PS1="$(print_prompt) $(print_git_branch_for_prompt)"
-
 # save bash history, and also append it after every command
 shopt -s histappend
 export PROMPT_COMMAND="history -a; history -n"
