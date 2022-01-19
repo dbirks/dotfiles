@@ -65,7 +65,7 @@ in
       awscli2
       awslogs
       aws-iam-authenticator
-      aws-sam-cli
+      #aws-sam-cli
       bat
       binutils-unwrapped
       brave
