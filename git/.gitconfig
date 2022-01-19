@@ -43,3 +43,4 @@
 [alias]
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   gone = ! git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | grep '\\[gone\\]' | cut -d ' ' -f 1 | xargs -r git branch -D
+  pr-report = log origin/HEAD.. --format='%s%n- %b'
