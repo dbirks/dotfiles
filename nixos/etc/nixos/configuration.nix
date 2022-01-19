@@ -137,7 +137,7 @@ in
       ldns
       lens
       libimobiledevice
-      libreoffice-fresh
+      libreoffice
       lsof
       magic-wormhole
       maven
