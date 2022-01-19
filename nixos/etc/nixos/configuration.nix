@@ -184,6 +184,8 @@ in
       ssmsh
       starship
       stow
+      superTux
+      superTuxKart
       syncthing
       teams
       terminal-parrot
