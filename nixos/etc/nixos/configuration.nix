@@ -204,7 +204,6 @@ in
       yarn
       youtube-dl
       yq-go
-      yubioath-desktop
       zip
       zoom-us
     ];
