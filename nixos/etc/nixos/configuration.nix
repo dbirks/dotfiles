@@ -77,7 +77,6 @@ in
       dbeaver
       ddrescue
       deja-dup
-      direnv
       dive
       docker-compose
       dmidecode
