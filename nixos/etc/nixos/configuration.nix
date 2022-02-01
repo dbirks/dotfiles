@@ -246,8 +246,6 @@ in
   };
 
   nix = {
-    autoOptimiseStore = true;
-
     extraOptions = ''
       experimental-features = nix-command
     '';
@@ -259,6 +257,8 @@ in
     };
 
     package = pkgs.nixUnstable; # needed until nix 2.4 is released
+
+    settings.auto-optimise-store = true;
   };
 
   nixpkgs.config = {
