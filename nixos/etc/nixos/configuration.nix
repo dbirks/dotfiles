@@ -70,6 +70,7 @@ in
       binutils-unwrapped
       brave
       chamber
+      checkbashisms
       chromium
       cifs-utils
       conda
