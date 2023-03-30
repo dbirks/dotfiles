@@ -1012,6 +1012,12 @@
         "options": {
           "full_name": "zoom"
         }
+      },
+      "signal": {
+        "version": "6.12.0",
+        "options": {
+          "full_name": "signal"
+        }
       }
     }
   },
