@@ -19,6 +19,8 @@ brew "neovim"
 brew "nvm"
 brew "stow"
 brew "tmux"
+brew "virtualenv"
+brew "virtualenvwrapper"
 brew "yq"
 brew "yt-dlp"
 
