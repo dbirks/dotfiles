@@ -1009,6 +1009,55 @@
             }
           }
         }
+      },
+      "hadolint": {
+        "version": "2.12.0",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/hadolint/blobs/sha256:c721712adf9cbc6c02517b8c912462b9ae9bb89d84654a4f6b2f83e877103d4c",
+              "sha256": "c721712adf9cbc6c02517b8c912462b9ae9bb89d84654a4f6b2f83e877103d4c"
+            },
+            "arm64_monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/hadolint/blobs/sha256:56ff572bce4302be865315fb8f3600dea1491f10bb527c808d88d3b6eea0cd24",
+              "sha256": "56ff572bce4302be865315fb8f3600dea1491f10bb527c808d88d3b6eea0cd24"
+            },
+            "arm64_big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/hadolint/blobs/sha256:3a5ec25ca1ad776f4336830f309f63665c590521248e5a5d3a61bf6583f65b1b",
+              "sha256": "3a5ec25ca1ad776f4336830f309f63665c590521248e5a5d3a61bf6583f65b1b"
+            },
+            "ventura": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/hadolint/blobs/sha256:4de41cd99e149ac7d69ad2c2be30870204072993af1c78789fdc025f58b4e256",
+              "sha256": "4de41cd99e149ac7d69ad2c2be30870204072993af1c78789fdc025f58b4e256"
+            },
+            "monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/hadolint/blobs/sha256:1df703a623dc8dbb3423a593a9050ece0e560400a1bf07779968779e055e0fff",
+              "sha256": "1df703a623dc8dbb3423a593a9050ece0e560400a1bf07779968779e055e0fff"
+            },
+            "big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/hadolint/blobs/sha256:ed03ac5e81ded1c0e18ad0475d03ca708ea159939789b59049d63507bbe1be6f",
+              "sha256": "ed03ac5e81ded1c0e18ad0475d03ca708ea159939789b59049d63507bbe1be6f"
+            },
+            "catalina": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/hadolint/blobs/sha256:85d88fda55b31414f8e91de69916c7c1ed8c3d48da54b7abab6fd09cdb8f195a",
+              "sha256": "85d88fda55b31414f8e91de69916c7c1ed8c3d48da54b7abab6fd09cdb8f195a"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/hadolint/blobs/sha256:1f4fbe6eb66d7e58700076ef0f4b3f775e441355ccdb7d65451d327536dc75e1",
+              "sha256": "1f4fbe6eb66d7e58700076ef0f4b3f775e441355ccdb7d65451d327536dc75e1"
+            }
+          }
+        }
       }
     },
     "cask": {
