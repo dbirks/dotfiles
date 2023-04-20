@@ -3,6 +3,7 @@ tap "heroku/brew"
 
 brew "awscli"
 brew "azure-cli"
+brew "bash"
 brew "chamber"
 brew "csvkit"
 brew "delta"
