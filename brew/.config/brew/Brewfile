@@ -1,11 +1,13 @@
 tap "homebrew/bundle"
 tap "heroku/brew"
+tap "egineering-llc/dashboard-cli", "https://github.com/egineering-llc/dashboard-cli"
 
 brew "awscli"
 brew "azure-cli"
 brew "bash"
 brew "chamber"
 brew "csvkit"
+brew "dashboard-cli"
 brew "delta"
 brew "eksctl"
 brew "fzf"
