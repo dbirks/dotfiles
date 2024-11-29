@@ -1,12 +1,12 @@
-window:
-  dimensions:
-    columns: 0
-    lines: 0
-  padding:
-    x: 2
-    y: 2
-  dynamic_padding: false
-  #decorations: none
+# window:
+#   dimensions:
+#     columns: 0
+#     lines: 0
+#   padding:
+#     x: 2
+#     y: 2
+#   dynamic_padding: false
+#   #decorations: none
 scrolling:
   history: 100000
   multiplier: 3
@@ -19,7 +19,14 @@ font:
     family: Fantasque Sans Mono
   bold_italic:
     family: Fantasque Sans Mono
-
+  # normal:
+  #   family: Terminus
+  # bold:
+  #   family: Terminus
+  # italic:
+  #   family: Terminus
+  # bold_italic:
+  #   family: Terminus
   size: 12.0
   offset:
     x: 0
@@ -28,7 +35,7 @@ font:
     x: 0
     y: 0
 draw_bold_text_with_bright_colors: true
-custom_cursor_colors: true
+# custom_cursor_colors: true
 schemes:
   # Base16 Hopscotch 256 - alacritty color config
   # Jan T. Sott
@@ -92,34 +99,34 @@ schemes:
       white:      '0xd3d3d6'
     indexed_colors: []
 colors: *hopscotch
-background_opacity: 1.0
-mouse:
-  double_click: { threshold: 300 }
-  triple_click: { threshold: 300 }
-  hide_when_typing: false
-  url:
-    modifiers: None
-selection:
-  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
-  save_to_clipboard: false
-cursor:
-  style: Block
-  unfocused_hollow: true
+# background_opacity: 1.0
+# mouse:
+#   double_click: { threshold: 300 }
+#   triple_click: { threshold: 300 }
+#   hide_when_typing: false
+#   url:
+#     modifiers: None
+# selection:
+#   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+#   save_to_clipboard: false
+# cursor:
+#   style: Block
+#   unfocused_hollow: true
 live_config_reload: true
-enable_experimental_conpty_backend: false
-alt_send_esc: true
-mouse_bindings:
-  - { mouse: Middle, action: PasteSelection }
-key_bindings:
-  - { key: V,              mods: Control|Shift,           action: Paste            }
-  - { key: C,              mods: Control|Shift,           action: Copy             }
-  - { key: F,              mods: Control|Shift,           action: SearchForward    }
-  - { key: B,              mods: Control|Shift,           action: SearchBackward   }
-  - { key: C,              mods: Control|Shift, mode: Vi, action: ClearSelection   }
-  - { key: Insert,         mods: Shift,                   action: PasteSelection   }
-  - { key: Key0,           mods: Control,                 action: ResetFontSize    }
-  - { key: Equals,         mods: Control,                 action: IncreaseFontSize }
-  - { key: Plus,           mods: Control,                 action: IncreaseFontSize }
-  - { key: NumpadAdd,      mods: Control,                 action: IncreaseFontSize }
-  - { key: Minus,          mods: Control,                 action: DecreaseFontSize }
-  - { key: NumpadSubtract, mods: Control,                 action: DecreaseFontSize }
+# enable_experimental_conpty_backend: false
+# alt_send_esc: true
+# mouse_bindings:
+#   - { mouse: Middle, action: PasteSelection }
+# key_bindings:
+#   - { key: V,              mods: Control|Shift,           action: Paste            }
+#   - { key: C,              mods: Control|Shift,           action: Copy             }
+#   - { key: F,              mods: Control|Shift,           action: SearchForward    }
+#   - { key: B,              mods: Control|Shift,           action: SearchBackward   }
+#   - { key: C,              mods: Control|Shift, mode: Vi, action: ClearSelection   }
+#   - { key: Insert,         mods: Shift,                   action: PasteSelection   }
+#   - { key: Key0,           mods: Control,                 action: ResetFontSize    }
+#   - { key: Equals,         mods: Control,                 action: IncreaseFontSize }
+#   - { key: Plus,           mods: Control,                 action: IncreaseFontSize }
+#   - { key: NumpadAdd,      mods: Control,                 action: IncreaseFontSize }
+#   - { key: Minus,          mods: Control,                 action: DecreaseFontSize }
+#   - { key: NumpadSubtract, mods: Control,                 action: DecreaseFontSize }

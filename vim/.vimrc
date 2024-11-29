@@ -81,3 +81,6 @@ set smartindent
 "---------Pasting----------"
 
 set pastetoggle=<f5>
+
+" w i\n <Esc>/=\nxi: <Esc><Esc>
+

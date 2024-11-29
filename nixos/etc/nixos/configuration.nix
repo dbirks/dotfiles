@@ -1,14 +1,22 @@
 { config, pkgs, options, ... }:
 
-let
-  unstablePinned = import (builtins.fetchTarball https://github.com/NixOS/nixpkgs/archive/8e1eab9eae4278c9bb1dcae426848a581943db5a.tar.gz) {
-    config.allowUnfree = true;
-  };
-in
+#let
+#  unstablePinned = import (builtins.fetchTarball https://github.com/NixOS/nixpkgs/archive/8e1eab9eae4278c9bb1dcae426848a581943db5a.tar.gz) {
+#    config.allowUnfree = true;
+#  };
+#in
 
 {
   imports = [
-    <nixos-hardware/dell/xps/13-9310>
+    #<nixos-hardware/dell/xps/13-9310>
+    #<nixos-hardware/dell/xps/15-9570/nvidia>
+    #<nixos-hardware/framework/13-inch/13th-gen-intel>
+    #<nixos-hardware-dbirks/framework/13-inch/intel-core-ultra-series1>
+    #"${builtins.fetchGit { url = "https://github.com/NixOS/nixos-hardware.git"; rev = "b2db7996458d18f9357a6fef832698383c7cb3ff"; }}/framework/13-inch/intel-core-ultra-series1"
+    #"${builtins.fetchGit { url = "https://github.com/dbirks/nixos-hardware.git"; rev = "b2db7996458d18f9357a6fef832698383c7cb3ff"; }}/framework/13-inch/intel-core-ultra-series1"
+    #"${builtins.fetchGit { url = "https://github.com/dbirks/nixos-hardware.git"; rev = "d946a2566916e25ff03cc9d94e315850879ad9b9"; }}/framework/13-inch/intel-core-ultra-series1"
+    <nixos-hardware/framework/13-inch/intel-core-ultra-series1>
+    # <home-manager/nixos>
     ./hardware-configuration.nix
     ./secret.nix
   ];
@@ -27,15 +35,26 @@ in
       # https://stackoverflow.com/a/41453306/7733616
       "net.ipv4.ip_forward" = 1;
     };
+    tmp = {
+      useTmpfs = true;
+      tmpfsSize = "80%";
+      cleanOnBoot = true;
+    };
   };
 
   environment.systemPackages =
     let
       myPythonPackages = pythonPackages: with pythonPackages; [
-        ansible
-        boto3
-        botocore
+        # ansible
+        # ansible-core
+        # boto3
+        # botocore
+        # conda
+        # huggingface-hub
+        pip
       ];
+
+      # vscode-fhsWithPackages = pkgs.vscode-fhs (pkgs: with pkgs; [ zlib vim ])
 
       # vscode-with-extensions = pkgs.vscode-with-extensions.override {
       #   vscodeExtensions = with pkgs.vscode-extensions; [
@@ -59,166 +78,233 @@ in
       # };
     in
     with pkgs; [
+      # ansible
+      # python310Packages.boto3
+      # python310Packages.botocore
+
       (python3.withPackages myPythonPackages)
-      act
+      #nix-update
+      # #unstablePinned.nodejs-16_x
+      # nodejs-18_x
+      # #nodejs-slim-12_x
+      # unstablePinned.nodePackages.npm
+      #act
       alacritty
-      awscli2
-      awslogs
-      aws-iam-authenticator
+      argocd
+      audacity
+      #awscli2
+      # awslogs
+      #aws-iam-authenticator
       #aws-sam-cli
       bat
-      binutils-unwrapped
-      brave
-      chamber
-      checkbashisms
-      chromium
+      # binutils-unwrapped
+      buildpack
+      #chamber
+      #checkbashisms
+      #chromium
       cifs-utils
       conda
+      csvkit
       cypress
-      dbeaver
+      #dbeaver
       ddrescue
-      deja-dup
-      dive
+      #deja-dup
+      delta
+      #dive
+      docker-buildx
       docker-compose
       dmidecode
-      eksctl
-      element-desktop
-      etcher
-      evolutionWithPlugins
+      #element-desktop
+      #etcher
+      #evolutionWithPlugins
       ffmpeg
       figlet
       file
-      firefox-bin
-      flameshot
-      fluxcd
+      #firefox-esr
+      #flameshot
+      #fluxcd
       fontforge
       fontforge-gtk
       fontforge-fonttools
-      fzf
+      #fzf
       gawk
       gettext
       gcc
       ghostscript
-      git
+      #git
       gitAndTools.diff-so-fancy
-      gitAndTools.gh
+      #gitAndTools.gh
       gitAndTools.hub
       git-crypt
-      git-lfs
+      #git-lfs
       glances
       glib # for glib-compile-schemas
-      gnome3.gpaste
-      gnome3.gnome-tweaks
-      # gnome3.pomodoro
-      gnome3.seahorse
+      #gnome3.gpaste
+      gnome-tweaks
+      seahorse
+      networkmanager-l2tp
       gnomeExtensions.appindicator
-      gnomeExtensions.material-shell
+      #gnomeExtensions.appindicator
+      #gnomeExtensions.material-shell
+      gnome-network-displays
       gnumake
       gnupg
-      go
-      google-chrome
-      goreleaser
       gradle
-      grafana-loki
-      hey
-      htop
+      #grafana-loki
+      #hey
+      #htop
       inetutils
-      insomnia
-      jq
-      k9s
-      keybase-gui
-      kind
+      #insomnia
+      inotify-tools
+      #jq
+      #k9s
+      kazam
+      #keybase-gui
+      #kind
       krb5
-      krew
+      #krew
       krita
-      kubectl
-      kubectx
-      kubernetes-helm
+      #kubectl
+      #kubectx
+      #kubernetes-helm
       ldns
-      lens
+      #lens
       libimobiledevice
-      libreoffice
+      #libreoffice
+      losslesscut-bin
       lsof
-      magic-wormhole
+      # magic-wormhole
       maven
       meld
-      microplane
+      #metasploit
+      #microplane
+      miraclecast
       moreutils
       mpv
       mtr
       ncdu
       neofetch
+      #neovim
+      #newman
+      nfs-utils
       nerdfonts
-      nixpkgs-fmt
-      nixpkgs-review
-      nix-prefetch-git
-      nix-update
-      unstablePinned.nodejs-16_x
-      # nodejs-slim-12_x
-      # unstablePinned.nodePackages.npm
+      net-snmp
+      #nixpkgs-fmt
+      #nixpkgs-review
+      #nix-prefetch-git
+      #zsh
+      bash
       nmap
       obs-studio
-      obsidian
+      #octant
+      #octant-desktop
+      #obsidian
       openconnect
-      openjdk11
+      #globalprotect-openconnect
+      #openjdk8
+      #openjdk17
       openldap
       openssl
+      # perl534Packages.Appperlbrew
+      # perl534Packages.Carton
+      # perl534Packages.libxml_perl
+      # perl534Packages.AlienLibxml2
+      # perl534Packages.libxml_perl
+      # libxml2
+      #pgadmin4
       pgbadger
       pinta
       postgresql
-      postman
+      #postman
+      #python310Packages.howdoi
       # pulseeffects-legacy
       #pulumi-bin
-      qutebrowser
+      #qutebrowser
       redis
+      #redis-desktop-manager
       remmina
       rpi-imager
-      shellcheck
-      shfmt
-      signal-desktop
+      #shellcheck
+      #shfmt
+      #signal-desktop
       silver-searcher
       simplescreenrecorder
-      slack
-      spotify
+      #spotify
       sshpass
       ssmsh
       starship
       stow
       superTux
       superTuxKart
-      syncthing
-      teams
+      #syncthing
+      #teams
       terminal-parrot
-      terraform_1
-      thunderbird
+      #terraform_1
+      #thunderbird
       tilt
-      tmux
+      #tmux
       uget
       unzip
-      vagrant
+      #vagrant
       vim
       virt-manager
       # vscode-with-extensions
-      vscode-fhs
+      # vscode-fhs
+      # vscode-fhsWithPackages (pkgs: with pkgs; [ zlib vim ])
+      # vscode-fhsWithPackages
       wireshark
+      xclip
       yarn
-      youtube-dl
-      yq-go
+      #youtube-dl
       zip
-      zoom-us
+      #terraformer
+      #_1password
+      #ngrok
+      #pspg
+      #lastpass-cli
+      #okular
+      #notion-app-enhanced
+      #trivy
+      #uucp
+      #cutecom
+      #minicom
+      #kubeshark
+      fio
+
+      # vscode
+
+      libsForQt5.bismuth
+
+      # (pkgs.lens.overrideAttrs (oldAttrs: {
+      #   src = pkgs.fetchurl {
+      #     url = "https://github.com/MuhammedKalkan/OpenLens/releases/download/v6.1.1/OpenLens-6.1.1.AppImage";
+      #     sha256 = "sha256-hIYmoO44pdpqqUkkmvB/ar92AnWsnVdpzQaSfO7j3Hk=";
+      #   };
+      # }))
     ];
 
-  fonts.fonts = with pkgs; [
+  # https://discourse.nixos.org/t/a-fast-way-for-modifying-etc-hosts-using-networking-extrahosts/4190/3
+  environment.etc.hosts.mode = "0644";
+
+  fonts.packages = with pkgs; [
     fantasque-sans-mono
+    material-design-icons
+    nerdfonts
     noto-fonts
-    noto-fonts-cjk
+    noto-fonts-cjk-sans
     noto-fonts-emoji
     source-code-pro
     terminus_font
   ];
 
   hardware = {
-    pulseaudio.enable = true;
+    pulseaudio = {
+      enable = false;
+      # extraConfig = ''
+      #   load-module module-echo-cancel
+      # '';
+    };
+    sane.enable = true;
     sensor.iio.enable = true;
   };
 
@@ -230,20 +316,25 @@ in
   };
 
   networking = {
-    extraHosts = ''
-      127.0.0.1 placeholder.com
-    '';
+    # extraHosts = ''
+    #   127.0.0.1 placeholder.com
+    # '';
     firewall = {
-      allowedTCPPorts = [ 80 ];
+      #allowedTCPPorts = [ 80 5173 5432 8082 8080 ];
+      allowedTCPPorts = [ 5434 8096 ];
       allowPing = false;
       enable = true;
     };
-    interfaces.eth0.useDHCP = true;
+    #interfaces.eth0.useDHCP = true;
     interfaces.wlan0.useDHCP = true;
     hostName = "sandpiper";
     networkmanager.enable = true;
+    # wireless = {
+    #   enable = true;
+    # };
     useDHCP = false;
     usePredictableInterfaceNames = true;
+    wireguard.enable = true;
   };
 
   nix = {
@@ -257,16 +348,44 @@ in
       options = "--delete-older-than 30d";
     };
 
-    package = pkgs.nixUnstable; # needed until nix 2.4 is released
+    #package = pkgs.nixUnstable; # needed until nix 2.4 is released
 
-    settings.auto-optimise-store = true;
+    settings = {
+      auto-optimise-store = true;
+      substituters = [
+        "https://cache.nixos.org/"
+        "https://nix-community.cachix.org"
+        "https://ploop.cachix.org"
+        "https://numtide.cachix.org"
+      ];
+      trusted-public-keys = [
+        "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+        "ploop.cachix.org-1:i6+Fqarsbf5swqH09RXOEDvxy7Wm7vbiIXu4A9HCg1g="
+        "numtide.cachix.org-1:2ps1kLBUWjxIneOy1Ik6cQjb41X0iXVXeHigGmycPPE="
+      ];
+    };
   };
 
-  nixpkgs.config = {
-    allowUnfree = true;
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
+    # overlays = [
+    #   (self: super:
+    #     {
+    #       lens = super.lens.overrideAttrs (old: {
+    #         src = pkgs.fetchurl {
+    #           url = "https://github.com/MuhammedKalkan/OpenLens/releases/download/v6.1.1/OpenLens-6.1.1.AppImage";
+    #           sha256 = "sha256-u3pOiacEOPe0O0ucO+l6EEYy+T/9uyDdsQMR/OvsRQ8=";
+    #         };
+    #       });
+    #     }
+    #   )
+    # ];
   };
 
-  powerManagement.powertop.enable = true;
+  #powerManagement.powertop.enable = true;
 
   programs = {
     dconf.enable = true;
@@ -278,26 +397,51 @@ in
       ];
     };
 
-    geary.enable = false;
+    # geary.enable = false;
 
     gnupg.agent = {
       enable = true;
       #enableSSHSupport = true;
-      pinentryFlavor = "gnome3";
+      #pinentryFlavor = "gnome3";
     };
+
+    hyprland.enable = true;
+
+    java.enable = true;
 
     nm-applet.enable = true;
 
+    # noisetorch.enable = true;
+
+    #openvpn3.enable = true;
+
     seahorse.enable = true;
+
+    #steam.enable = true;
+    steam.enable = false;
+
+    # vscode.package = pkgs.vscode-fhsWithPackages (ps: with ps; [ vim ]);
+
+    zsh.enable = true;
   };
 
   services = {
     avahi = {
       enable = true;
-      nssmdns = true;
+      nssmdns4 = true;
     };
 
-    fwupd.enable = true;
+    flatpak.enable = true;
+
+    fwupd = {
+      enable = true;
+      extraRemotes = [ "lvfs-testing" ];
+    };
+
+    # globalprotect = {
+    #   enable = true;
+    #   # csdWrapper = "${pkgs.openconnect}/libexec/openconnect/hipreport.sh";
+    # };
 
     gnome = {
       core-os-services.enable = true;
@@ -305,9 +449,40 @@ in
       core-utilities.enable = true;
       evolution-data-server.enable = true;
       gnome-keyring.enable = true;
+      games.enable = false;
+      sushi.enable = true;
     };
 
+    libinput.enable = true;
+
+    llama-cpp = {
+      enable = false;
+      model = "/home/david/Downloads/llama3.1";
+    };
+
+    jellyfin.enable = true;
+
+    #mullvad-vpn.enable = true;
+
+    # ollama = {
+    #   enable = true;
+    #   environmentVariables = {
+    #     OLLAMA_INTEL_GPU = "1";
+    #   };
+    # };
+
+    netdata.enable = true;
+
     pcscd.enable = true; # for yubikey
+
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      # If you want to use JACK applications, uncomment this
+      jack.enable = true;
+    };
 
     # Fixes the error:
     #   Failed assertions:
@@ -323,53 +498,120 @@ in
       ];
     };
 
+    # https://github.com/NixOS/nixpkgs/issues/64965#issuecomment-741920446
+    strongswan = {
+      enable = true;
+      secrets = [
+        "ipsec.d/ipsec.nm-l2tp.secrets"
+      ];
+    };
+
     syncthing = {
       enable = true;
       user = "david";
       configDir = "/home/david/.config/syncthing";
+      dataDir = "/home/david/.config/syncthing/db";
     };
 
+    tailscale.enable = true;
+
+    teamviewer = {
+      enable = false;
+      # enable = true;
+    };
+
+    dbus.packages = [ pkgs.dconf ];
+
     udev.packages = with pkgs; [
+      #gnome-settings-daemon
       yubikey-personalization
     ];
+
+    unifi = {
+      #enable = true;
+      enable = false;
+      openFirewall = true;
+      unifiPackage = pkgs.unifi8;
+      mongodbPackage = pkgs.mongodb-7_0;
+    };
 
     usbmuxd.enable = true; # for connecting to iOS
 
     xserver = {
       enable = true;
-      libinput.enable = true;
       displayManager.gdm = {
         enable = true;
-        wayland = false;
+        wayland = true;
       };
-      desktopManager.gnome.enable = true;
+      desktopManager = {
+        gnome.enable = true;
+        # plasma5.enable = true;
+      };
+      #videoDrivers = [ "displaylink" "modesetting" ];
+      videoDrivers = [ "modesetting" ];
     };
   };
 
   security = {
     apparmor.enable = true;
     pam.services.gdm.enableGnomeKeyring = true;
+    pki.certificateFiles = [ /home/david/mitmproxy-ca-cert.pem ];
   };
 
-  sound.enable = true;
+  # services.pipewire.wireplumber.enable = true;
+  # sound.enable = true;
 
-  system.stateVersion = "20.09";
+  system.stateVersion = "23.11";
 
   time.timeZone = "America/New_York";
 
   users.users.david = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" "libvirtd" ];
+    extraGroups = [ "wheel" "docker" "libvirtd" "audio" "dialout" "scanner" "lp" ];
+    shell = pkgs.zsh;
   };
+  # home-manager = {
+  #   useGlobalPkgs = true;
+  #   # useUserPackages = true;
+  #   users.david = { pkgs, ... }: {
+  #     nixpkgs.config.allowUnfree = true;
+  #     home = {
+  #       username = "david";
+  #       homeDirectory = "/home/david";
+  #       packages = with pkgs; [
+  #       ];
+  #     };
+  #     programs = {
+  #       # bash.enable = true;
+  #       # zsh.enable = true;
+  #       # gtk.enable = true;
+  #       vscode.enable = true;
+  #     };
+  #   };
+  # };
 
   virtualisation = {
-    docker.enable = true;
+    docker = {
+      enable = true;
+      daemon.settings = {
+        default-address-pools = [
+          {
+            base = "172.100.0.0/16";
+            size = 24;
+          }
+        ];
+      };
+    };
     libvirtd = {
       allowedBridges = [
         "virbr0"
       ];
       enable = true;
     };
-    podman.enable = true;
+    podman = {
+      enable = true;
+    };
   };
+
+  # wayland.windowManager.hyprland.enable = true;
 }

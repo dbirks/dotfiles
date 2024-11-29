@@ -1,36 +1,38 @@
 [user]
   name = David Birks
   #email = david@birks.dev
-  email = dbirks@polarislabs.com
-  signingKey = B26F9AD8DA203392EF87C61ABB999F83D9A19A36
+	email = david@birks.dev
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOhJWxqDdLMeEzBMePcGjb2PUHwJmd/d2zjo6TDgbuO1
 
 [color]
   ui = true
 
 [core]
   fileMode = true
-  pager = diff-so-fancy | less --tabs=4 -RFX
+#  editor = code
+  #pager = diff-so-fancy | less --tabs=4 -RFX
+#  pager = delta
 
-[diff-so-fancy]
-  stripLeadingSymbols = false
-  first-run = false
-
-[color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
-
-[color "diff"]
-  meta = yellow
-  frag = magenta bold
-  commit = yellow bold
-  old = red bold
-  new = green bold
-  whitespace = red reverse
+#[diff-so-fancy]
+#  stripLeadingSymbols = false
+#  first-run = false
+#
+#[color "diff-highlight"]
+#  oldNormal = red bold
+#  oldHighlight = red bold 52
+#  newNormal = green bold
+#  newHighlight = green bold 22
+#
+#[color "diff"]
+#  meta = yellow
+#  frag = magenta bold
+#  commit = yellow bold
+#  old = red bold
+#  new = green bold
+#  whitespace = red reverse
 
 [commit]
-  gpgSign = true
+	gpgsign = true
 
 [filter "lfs"]
   clean = git-lfs clean -- %f
@@ -41,7 +43,30 @@
 [pull]
   ff = only
 
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
 [alias]
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   gone = ! git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | grep '\\[gone\\]' | cut -d ' ' -f 1 | xargs -r git branch -D
   pr-report = log origin/HEAD.. --format='%s%n- %b'
+  pushed = push -u origin HEAD --no-verify --force-with-lease
+
+[credential]
+	helper = store
+[gpg]
+	format = ssh
+
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = main

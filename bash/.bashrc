@@ -178,3 +178,38 @@ fi
 
 alias bump='git commit -m "Empty commit" --allow-empty && git push'
 
+alias tc='clear; tmux clear-history'
+
+# source ~/polaris/developer-toolkit/install.sh
+
+#alias pbcopy='xclip -selection clipboard'
+#alias pbpaste='xclip -selection clipboard -o'
+
+eval "$(logcli --completion-script-bash)"
+
+pbcopy() {
+  xclip -selection clipboard
+}
+
+pbpaste() {
+  xclip -selection clipboard -o
+}
+
+open() {
+  xdg-open $@
+}
+
+list_s3_sizes() {
+  local buckets=$(aws s3api list-buckets --query "Buckets[].Name" --output text)
+  
+  # Iterate through each bucket
+  for bucket in $buckets; do
+      echo "Processing bucket: $bucket"
+
+      # Get size of all objects in the bucket and sum them
+      local total_size=$(aws s3 ls s3://"$bucket" --recursive --human-readable --summarize | \
+                   grep "Total Size" | awk '{print $3, $4}')
+  
+      echo "Bucket: $bucket, Size: $total_size"
+  done
+}
