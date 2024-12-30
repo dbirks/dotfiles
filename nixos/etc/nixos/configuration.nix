@@ -44,15 +44,15 @@
 
   environment.systemPackages =
     let
-      myPythonPackages = pythonPackages: with pythonPackages; [
-        # ansible
-        # ansible-core
-        # boto3
-        # botocore
-        # conda
-        # huggingface-hub
-        pip
-      ];
+      # myPythonPackages = pythonPackages: with pythonPackages; [
+      #   # ansible
+      #   # ansible-core
+      #   # boto3
+      #   # botocore
+      #   # conda
+      #   # huggingface-hub
+      #   pip
+      # ];
 
       # vscode-fhsWithPackages = pkgs.vscode-fhs (pkgs: with pkgs; [ zlib vim ])
 
@@ -82,7 +82,8 @@
       # python310Packages.boto3
       # python310Packages.botocore
 
-      (python3.withPackages myPythonPackages)
+      #(python3.withPackages myPythonPackages)
+      python3
       #nix-update
       # #unstablePinned.nodejs-16_x
       # nodejs-18_x
@@ -187,7 +188,7 @@
       #neovim
       #newman
       nfs-utils
-      nerdfonts
+      #nerdfonts
       net-snmp
       #nixpkgs-fmt
       #nixpkgs-review
@@ -286,16 +287,35 @@
   # https://discourse.nixos.org/t/a-fast-way-for-modifying-etc-hosts-using-networking-extrahosts/4190/3
   environment.etc.hosts.mode = "0644";
 
-  fonts.packages = with pkgs; [
-    fantasque-sans-mono
-    material-design-icons
-    nerdfonts
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-emoji
-    source-code-pro
-    terminus_font
-  ];
+  fonts = {
+    packages = with pkgs; [
+      courier-prime
+      fantasque-sans-mono
+      material-design-icons
+      meslo-lg
+      #nerdfonts
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-emoji
+      source-code-pro
+      terminus_font
+      nerd-fonts.comic-shanns-mono
+      nerd-fonts.fantasque-sans-mono
+      nerd-fonts.fira-code
+      nerd-fonts.terminess-ttf
+      nerd-fonts.hack
+      nerd-fonts.go-mono
+      nerd-fonts.overpass
+      nerd-fonts.gohufont
+      nerd-fonts._0xproto
+      nerd-fonts.anonymice
+      nerd-fonts.ubuntu-mono
+      nerd-fonts.ubuntu-sans
+      nerd-fonts.commit-mono
+    ];
+    enableDefaultPackages = true;
+    fontconfig.useEmbeddedBitmaps = true;
+  };
 
   hardware = {
     pulseaudio = {
@@ -321,7 +341,7 @@
     # '';
     firewall = {
       #allowedTCPPorts = [ 80 5173 5432 8082 8080 ];
-      allowedTCPPorts = [ 5434 8096 ];
+      allowedTCPPorts = [ 5434 8096 3000 8080 8443 3478 10001 5173 8000 ];
       allowPing = false;
       enable = true;
     };
@@ -464,12 +484,12 @@
 
     #mullvad-vpn.enable = true;
 
-    # ollama = {
-    #   enable = true;
-    #   environmentVariables = {
-    #     OLLAMA_INTEL_GPU = "1";
-    #   };
-    # };
+    ollama = {
+      enable = true;
+      environmentVariables = {
+        OLLAMA_INTEL_GPU = "1";
+      };
+    };
 
     netdata.enable = true;
 
@@ -528,8 +548,7 @@
     ];
 
     unifi = {
-      #enable = true;
-      enable = false;
+      enable = true;
       openFirewall = true;
       unifiPackage = pkgs.unifi8;
       mongodbPackage = pkgs.mongodb-7_0;
@@ -561,7 +580,7 @@
   # services.pipewire.wireplumber.enable = true;
   # sound.enable = true;
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.11";
 
   time.timeZone = "America/New_York";
 

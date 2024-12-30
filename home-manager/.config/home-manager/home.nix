@@ -296,8 +296,6 @@ in
     jellycli
     jftui
     ghostty
-
-
   ];
 
   fonts.fontconfig.enable = true;
