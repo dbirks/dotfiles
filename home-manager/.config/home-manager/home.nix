@@ -7,6 +7,19 @@
 #   nixpkgsUnstable = import <nixpkgs-unstable> { };
 # in
 
+let
+  unstablePinnedForNeovim9 = import (builtins.fetchTarball https://github.com/NixOS/nixpkgs/archive/9957cd48326fe8dbd52fdc50dd2502307f188b0d.tar.gz) {
+    config.allowUnfree = true;
+  };
+  unstablePinnedForNewerUvVersion5 = import (builtins.fetchTarball https://github.com/NixOS/nixpkgs/archive/f212b495d309f522024f065d79189be3e131c403.tar.gz) {};
+in
+
+# let
+#   packageOverrides = pkgs: rec {
+#     weechat = pkgs.weechat.override { extraBuildInputs = [ pkgs.weechatScripts.wee-slack pkgs.python311Packages.websocket-client ]; };
+#   };
+# in
+
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -36,18 +49,18 @@
 
     nodePackages.json-diff
     google-cloud-sdk
-    dbeaver
+    dbeaver-bin
     chart-testing
     #haskellPackages.nixpkgs-update
     #? pythonPackages.huggingface-cli
 
     ipcalc
-    sipcalc
+    #sipcalc
     imagemagick
     tflint
     vlc
     trivy
-    transmission-gtk
+    transmission_4-gtk
     drone-cli
     jc
     #youtube-dl
@@ -55,25 +68,24 @@
     cargo
     chart-testing
     tree
-    hadolint
+    #hadolint
     direnv
-    magic-wormhole
+    #magic-wormhole
     promtail
     tcptraceroute
-    obsidian
+    #obsidian
     bind
     heroku
     awslogs
-    k3s
+    #k3s
     pluto
     tcpdump
     stern
     k6
-    hadolint
     #dotnet-sdk_7
-    dotnet-sdk_6
-    libsForQt5.dolphin
-    xfce.thunar
+    #dotnet-sdk_6
+    #libsForQt5.dolphin
+    #xfce.thunar
     azure-cli
     eksctl
     samba
@@ -81,7 +93,8 @@
     firefox
     grpcurl
     #nixpkgsUnstable.awscli2
-    awscli2
+    #awscli2
+    unstablePinnedForNewerUvVersion5.awscli2
     dive
     fluxcd
     htop
@@ -96,20 +109,21 @@
     jdk17_headless
     #jdk8_headless
     ssm-session-manager-plugin
-    ansible-lint
-    azuredatastudio
-    lens
+    #ansible-lint
+    #lens
+    #openlens
     pluto
     kubent
-    teams
+    #teams
     aws-iam-authenticator
     act
     #unstablePinned.nodejs-16_x
-    nodejs-18_x
+    nodejs_20
     #nodejs-slim-12_x
     #unstablePinned.nodePackages.npm
-    go_1_20
+    go
     google-chrome
+    chromium
     google-cloud-sdk
     goreleaser
     slack
@@ -123,18 +137,173 @@
     nodePackages.zx
     wishlist
     virtualenv
-    python310Packages.virtualenvwrapper
+    #python310Packages.virtualenvwrapper
+    #python311Packages.virtualenvwrapper
     ttyd
     rufo
     poetry
     signal-desktop
     kubeshark
     linkerd
+    #jetbrains.idea-community
+    mullvad
+    poetry
+    #libstdcxx5
+    #python39Packages.numpy
+    skopeo
+    nodePackages.pnpm
+    kubie
+    unstablePinnedForNeovim9.neovim
+    dos2unix
+    ollama
+    mkcert
+    insomnia
+    weechat
+    weechatScripts.wee-slack
+    terminus_font
+    #terminus-nerdfont
+    #nerdfonts
+    tmux
+    thunderbird
+    shfmt
+    shellcheck
+    postman
+    metasploit
+    kind
+    krew
+    k9s
+    jq
+    hey
+    git
+    git-lfs
+    fzf
+    flameshot
+    chamber
+    checkbashisms
+    nix-update
+    #globalprotect-openconnect
+    gpclient
+    openconnect
+    obs-studio
+    nmap
+    zsh
+    nix-prefetch-git
+    nixpkgs-review
+    nixpkgs-fmt
+    newman
+    wget
+    fio
+    #dbt
+    playwright-driver.browsers
+    #chatgpt-cli
+    #chatblade
+    diffuse
+    #anytype
+    kdiff3
+    meld
+    #tor-browser
+    gthumb
+    libsForQt5.kdenlive
+    #archivebox
+    gp-saml-gui
+    debootstrap
+    #jetbrains.pycharm-professional
+    cw
+    terraform
+    helvum
+    carla
+    lynx
+    ipmitool
+    pspg
+    at
+    aichat
+    cilium-cli
+    difftastic
+    swaks
+    talosctl
+    liquibase
+    postgresql_16
+    #cudatoolkit
+    pciutils # lspci
+    #nvidia-container-toolkit
+    lshw
+    go-task
+    jira-cli-go
+    #_1password-gui
+    #_1password-cli
+    #super-slicer
+    #orca-slicer
+    #icesl
+    prusa-slicer
+    ranger
+    pywal
+    eza
+    conda
+    azuredatastudio
+    s5cmd
+    lsix
+    hadolint
+    ventoy-full
+    apache-directory-studio
+    #microsoft-edge
+    grafana-agent
+    rye
+    age
+    gh
+    #minicom
+    #cura
+    #super-slicer-latest
+    zoxide
+    speechd
+    zellij
+    android-tools
+    lnav
+    vsce
+    #dog
+    doggo
+    unstablePinnedForNewerUvVersion5.uv
+    #cidr
+    websocat
+    intel-gpu-tools
+    #llama-cpp
+    maple-mono
+    #wofi
+    #playerctl
+    #rofi-wayland
+    #waybar
+    ##hyprpanel
+    #hyprlock
+    #hypridle
+    #aws-sam-cli
+    nh
+    code-cursor
+    zed-editor
+    ptyxis
+    devbox
+    deno
+    #bruno
+    lazydocker
+    dry
+    docui
+    nerdctl
+    #diffoci
+    oxker
+    distrobox
+    wpsoffice
+    onlyoffice-desktopeditors
+    ffmpeg
+    jellyfin-media-player
+    jellycli
+    jftui
+    ghostty
+
 
   ];
 
-  # Let Home Manager install and manage itself.
+  fonts.fontconfig.enable = true;
+
   programs = {
+    # Let Home Manager install and manage itself.
     home-manager.enable = true;
     vscode.enable = true;
     #zsh.enable = true;
@@ -145,9 +314,12 @@
   # };
 
   services = {
-    spotifyd = {
-      enable = true;
-    };
+    # spotifyd = {
+    #   enable = true;
+    # };
+    # mullvad-vpn = {
+    #   enable = true;
+    # };
   };
 
   nixpkgs.config.allowUnfree = true;
